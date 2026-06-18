@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>陀螺大數據 — 配置排行榜</title>
+<link rel="stylesheet" href="assets/site.css">
 <style>
-  :root{
-    --bg:#0f1115; --panel:#171a21; --line:#262b36; --txt:#e6e8ec; --dim:#8b93a3;
-    --good:#39d98a; --bad:#ff5d6c; --mid:#c8cdd6; --accent:#4d8dff;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--txt);
-       font-family:"Segoe UI","Microsoft JhengHei",system-ui,sans-serif;font-size:14px}
-  .wrap{max-width:980px;margin:0 auto;padding:16px 10px 48px}
+  /* 排行榜專屬樣式（共用樣式在 assets/site.css）。以下覆寫規則放在 link 之後才會生效 */
+  nav + .wrap{padding-top:16px}                                         /* 內容區在 nav 之後留白（不影響 nav 自身的 .wrap）*/
+  #tbl thead th{position:sticky;top:0;z-index:1}                        /* 長表表頭固定（共用 thead th 不 sticky；nav z-index:10 在其上）*/
+  .wr{font-weight:700}                                                  /* 選手列 span.wr 仍粗體（共用只有 td.wr）*/
+  table.mini th .ar.on, .pchead .ar.on{opacity:1;color:var(--accent)}  /* mini／選手面板排序箭頭高亮 */
+
+  /* —— 頁面頂部：標題＋搜尋＋語言/檢視 —— */
   h1{font-size:20px;margin:0 0 4px}
   .head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px}
   .headr{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
@@ -29,48 +29,15 @@
   .langbar select:focus{outline:none;border-color:var(--accent)}
   .meta{color:var(--dim);font-size:12px;margin-bottom:16px;line-height:1.6}
   .note{color:#d9a441}
-  table{width:100%;border-collapse:collapse;background:var(--panel);
-        border:1px solid var(--line);border-radius:10px;overflow:hidden}
-  thead th{position:sticky;top:0;background:#1b1f28;color:var(--dim);
-           font-weight:600;text-align:right;padding:9px 7px;white-space:nowrap;
-           cursor:pointer;user-select:none;border-bottom:1px solid var(--line);font-size:12px}
-  thead th.l{text-align:left}
-  thead th:hover{color:var(--txt)}
-  th .ar{opacity:.5;font-size:10px;margin-left:3px}
-  th .ar.on, table.mini th .ar.on, .pchead .ar.on{opacity:1;color:var(--accent)}
-  tbody td{padding:8px 7px;text-align:right;border-bottom:1px solid var(--line);
-           white-space:nowrap}
-  tbody tr:last-child td{border-bottom:none}
-  tbody tr:hover{background:#1d2230}
-  .rank{color:var(--dim);width:30px;text-align:center}
-  .combo{text-align:left}
-  .cwrap{display:flex;align-items:center;gap:6px}
-  .pics{display:flex;align-items:center;gap:4px;flex:0 0 auto}
-  .pic{width:80px;height:80px;border-radius:8px;background:#0c0e12;border:1px solid var(--line);
-       object-fit:contain;flex:0 0 auto}
-  .pic.multi{width:64px;height:64px}
-  .ph{width:80px;height:80px;border-radius:8px;background:#0c0e12;border:1px solid var(--line);
-      display:flex;align-items:center;justify-content:center;color:var(--dim);
-      font-weight:700;font-size:18px;flex:0 0 auto}
-  .ph.code{font-size:20px;letter-spacing:.3px;color:var(--txt)}
-  .nm{display:flex;flex-direction:column;line-height:1.25}
-  .blade{font-weight:600}
-  .sub{color:var(--dim);font-size:12px}
-  .tag{display:inline-block;font-size:10px;color:var(--dim);border:1px solid var(--line);
-       border-radius:4px;padding:0 5px;margin-left:6px;vertical-align:1px}
-  .wr{font-weight:700}
-  .bar{height:4px;border-radius:2px;background:#2a2f3a;margin-top:4px;overflow:hidden}
-  .bar > i{display:block;height:100%}
-  td.num{font-variant-numeric:tabular-nums}
-  tr.main{cursor:pointer}
+
+  /* —— 展開明細 —— */
   tr.main .combo .blade::after{content:"▶";font-size:.7em;color:var(--dim);margin-left:6px;display:inline-block;transition:transform .15s}
   tr.main.open .combo .blade::after{transform:rotate(90deg)}
-  /* 展開明細 */
   tr.detail.hidden{display:none}
   tr.detail > td{background:#10131a;padding:10px 10px}
   .detailwrap{display:flex;flex-wrap:wrap;gap:18px}
   .dcol{flex:1 1 200px;min-width:180px}
-  .dcol.wide{flex:1 1 320px}
+  .dcol.wide{flex:1 1 100%}   /* 對位戰績獨占整列，避免最右「影片來源」欄被切掉 */
   .dh{font-size:12px;color:var(--dim);font-weight:700;margin-bottom:8px;border-bottom:1px solid var(--line);padding-bottom:4px}
   table.mini{width:100%;border:none;background:transparent;font-size:13px}
   table.mini th{position:static;background:transparent;text-align:right;color:var(--dim);font-weight:600;padding:3px 6px;border:none;cursor:default;font-size:12px}
@@ -89,29 +56,19 @@
   .fbar > i{display:block;height:100%}
   .fval{width:78px;text-align:right;font-variant-numeric:tabular-nums}
   .kv{margin:4px 0;font-size:13px}
-  .dim{color:var(--dim)}
-  .srctoggle{cursor:pointer;color:var(--accent);font-weight:700;user-select:none}
-  .srctoggle::after{content:" ❐";font-weight:400}
-  .srctoggle:hover{text-decoration:underline}
-  thead th.src{cursor:default}
-  thead th.src:hover{color:var(--dim)}
-  /* 影片來源／對手配置彈窗 */
-  .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:50}
-  .modal.hidden{display:none}
-  .mbox{background:var(--panel);border:1px solid var(--line);border-radius:12px;width:min(560px,92vw);max-height:80vh;display:flex;flex-direction:column}
-  .mhead{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);font-weight:700}
-  .mhead button{background:none;border:none;color:var(--dim);font-size:18px;cursor:pointer}
-  .mhead button:hover{color:#fff}
-  .mbody{padding:8px 16px 16px;overflow:auto}
-  .mbody a{display:block;color:var(--accent);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--line)}
-  .mbody a:hover{text-decoration:underline}
   table.mini td.opp{cursor:pointer;color:var(--accent)}
   table.mini td.opp::after{content:" ❐";font-weight:400}
   table.mini td.opp:hover{color:var(--accent);text-decoration:underline}
-  .oppcard{display:flex;align-items:center;gap:14px;padding:10px 4px}
-  .oppcard .blade{font-weight:600;font-size:15px}
-  .oppcard .sub{color:var(--dim);font-size:13px;margin-top:2px}
-  /* 選手戰績（OP.GG 式：一場一列，可展開逐回合＋YT 回放） */
+  .oppcombo{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;padding:10px 4px}
+  .opppart{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+  .opppart .pics{flex-wrap:wrap;justify-content:center;max-width:200px}
+  .opppart .pic{width:110px;height:110px}            /* 彈窗內放大（共用為 80px）*/
+  .opppart .pic.multi{width:92px;height:92px}        /* CX 多圖放大（共用為 64px）、維持原換行位置 */
+  .opppart .nm{align-items:center}
+  .opppart .blade{font-size:15px}
+  .opppart .sub{font-size:12px;margin-top:2px}
+
+  /* —— 選手戰績（OP.GG 式）／常用陀螺 —— */
   .bhrow{border-bottom:1px solid var(--line)}
   .bhrow:last-child{border-bottom:none}
   .bhmain{display:flex;align-items:center;gap:12px;padding:8px 2px;cursor:pointer;flex-wrap:wrap}
@@ -121,18 +78,17 @@
   .bhopp{font-weight:600;min-width:130px}
   .bhres{font-variant-numeric:tabular-nums}
   .bhevt{flex:1;font-size:12px}
-  a.replay{color:var(--accent);text-decoration:none;font-weight:700;white-space:nowrap}
+  a.replay{color:var(--yt);text-decoration:none;font-weight:700;white-space:nowrap}   /* YT 回放：與站上「紅＝影片」一致 */
   a.replay:hover{text-decoration:underline}
   .bhrounds{padding:2px 0 10px}
   .bhrounds.hidden{display:none}
-  /* 選手「常用陀螺」：仿配置排行榜的列＋可展開明細 */
   .pchead,.pcmain{display:flex;align-items:center;gap:10px}
   .pchead{padding:4px 6px;color:var(--dim);font-size:12px;border-bottom:1px solid var(--line)}
   .pcmain{padding:8px 6px;cursor:pointer;border-bottom:1px solid var(--line)}
   .pcmain:hover{background:#1d2230}
   .pccfg{flex:1;min-width:0}
   .pcnum{width:80px;text-align:right;font-variant-numeric:tabular-nums;flex:0 0 auto}
-  .pcsrc{width:118px;text-align:right;flex:0 0 auto}
+  .pcsrc{width:132px;text-align:right;flex:0 0 auto}
   .pcmain .blade::after{content:"▶";font-size:.7em;color:var(--dim);margin-left:6px;display:inline-block;transition:transform .15s}
   .pcmain.open .blade::after{transform:rotate(90deg)}
   .pcdetail{padding:6px 6px 14px}
@@ -144,6 +100,22 @@
 </style>
 </head>
 <body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="/" class="logo" aria-label="BeyTop 戰鬥陀螺X 戰績網">Bey<span>Top</span><small>戰鬥陀螺X 戰績網</small></a>
+    <div class="nav-links">
+      <a href="manage.html">賽事管理</a>
+      <span class="nav-sep">｜</span>
+      <a href="rankings.html">配置排行</a>
+    </div>
+    <div class="nav-right">
+      <a class="btn yt" href="#" rel="noopener">▶ YouTube</a>
+      <a class="btn login" href="https://app.beytop.net/auth/login?next=/organizer">登入</a>
+    </div>
+  </div>
+</nav>
+
 <div class="wrap">
   <div class="head">
     <h1 id="title">陀螺大數據 · 配置排行榜</h1>
@@ -188,6 +160,20 @@
     點任一列可展開明細（每回合勝率/出場率、得分方式、勝負、對位戰績、影片來源）。
   </div>
 </div>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>Bey<span style="color:var(--accent)">Top</span> ・ 用真實賽事數據算戰鬥陀螺X勝率</div>
+    <div style="display:flex; gap:18px; flex-wrap:wrap">
+      <a href="#">YouTube 頻道</a>
+      <a href="rankings.html">戰鬥陀螺X 配置排行</a>
+      <a href="players.html">選手戰績</a>
+      <a href="events.html">比賽回看</a>
+      <a href="about.html">關於 BeyTop</a>
+    </div>
+    <div>© 2026 BeyTop</div>
+  </div>
+</footer>
 
 <div id="modal" class="modal hidden">
   <div class="mbox">
@@ -437,7 +423,7 @@
       var key = c[dim];
       var g = map[key];
       if(!g){
-        g = map[key] = { dim:dim, key:key, appearances:0, wins:0, points:0, combos:[] };
+        g = map[key] = { dim:dim, key:key, appearances:0, wins:0, points:0, combos:[], _src:{} };
         if(dim==='blade'){   // 上蓋彙總沿用顯示欄位與圖片
           g.blade=c.blade; g.blade_label=c.blade_label; g.blade_zh=c.blade_zh;
           g.blade_ja=c.blade_ja; g.system=c.system; g.blade_imgs=c.blade_imgs;
@@ -447,12 +433,16 @@
       g.wins += c.wins;
       g.points += (c.points || 0);
       g.combos.push(c);
+      // 彙整該項目底下各配置的影片來源（以 url 去重，同選手頁 _src 慣用法）
+      (c.sources||[]).forEach(function(s){ if(s.url && !g._src[s.url]) g._src[s.url]=s; });
     });
     _aggCache[dim] = Object.keys(map).map(function(k){
       var g = map[k];
       g.winrate    = g.appearances ? g.wins/g.appearances : 0;
       g.pickrate   = total ? g.appearances/total : 0;
       g.avg_points = g.appearances ? g.points/g.appearances : 0;
+      g.sources    = Object.keys(g._src).map(function(u){ return g._src[u]; });
+      delete g._src;
       return g;
     });
     return _aggCache[dim];
@@ -485,7 +475,7 @@
     }
     var body = arr.map(function(c){
       var ns = (c.sources||[]).length;
-      return '<tr><td class="l">'+esc(pairText(c,dim))+'</td>'
+      return '<tr><td class="l opp" data-opp="'+esc(c.combo)+'">'+esc(pairText(c,dim))+'</td>'
         +'<td style="color:'+wrColor(c.winrate)+'">'+pct(c.winrate)+'</td>'
         +'<td>'+pct(c.pickrate)+'</td>'
         +'<td>'+c.avg_points.toFixed(2)+'</td>'
@@ -838,8 +828,9 @@
       var sub = !agg ? '<span class="sub">'+esc(c.ratchet||'—')+' · '+esc(c.bit||'—')+'</span>'
                      : '<span class="sub">'+(c.combos?c.combos.length:0)+' '+t('s_combos')+'</span>';
       var detail = agg ? slimDetailHTML(c,i) : detailHTML(c,i);
-      var srcCell = agg ? '<span class="dim">—</span>'
-        : '<span class="srctoggle" data-i="'+i+'">'+t('src')+paren((c.sources||[]).length)+'</span>';
+      var ns = (c.sources||[]).length;   // 完整＝自身來源；聚合維度＝彙整後的來源
+      var srcCell = ns ? '<span class="srctoggle" data-i="'+i+'">'+t('src')+paren(ns)+'</span>'
+                       : '<span class="dim">—</span>';
       return '<tr class="main" data-i="'+i+'">'
         + '<td class="rank">'+(i+1)+'</td>'
         + '<td class="combo"><div class="cwrap">'+picHtml
@@ -982,10 +973,17 @@
     var c = comboByKey[opp];
     mtitle.textContent = oppName(opp);
     if(!c){ mbody.innerHTML = '<div class="dim">'+t('m_nodata')+'</div>'; modal.classList.remove('hidden'); return; }
-    mbody.innerHTML = '<div class="oppcard">'+pic(c)
-      +'<div class="nm"><span class="blade">'+esc(bladeName(c))
-        +(c.system==='CX'?'<span class="tag">CX</span>':'')+'</span>'
-      +'<span class="sub">'+esc((c.ratchet||'—')+' · '+(c.bit||'—'))+'</span></div></div>';
+    var cx = (c.system==='CX') ? '<span class="tag">CX</span>' : '';
+    function part(imgHtml, name, label){
+      return '<div class="opppart">'+imgHtml
+        +'<div class="nm"><span class="blade">'+name+'</span><span class="sub">'+label+'</span></div></div>';
+    }
+    // 上蓋／固鎖／軸心 各自的零件圖，由左到右
+    mbody.innerHTML = '<div class="oppcombo">'
+      + part(pic(c), esc(bladeName(c))+cx, t('mode_blade'))
+      + part(partPic('ratchet', c.ratchet||''), esc(c.ratchet||'—'), t('mode_ratchet'))
+      + part(partPic('bit', c.bit||''), esc(c.bit||'—'), t('mode_bit'))
+      + '</div>';
     modal.classList.remove('hidden');
   }
   function closeModal(){ modal.classList.add('hidden'); }
