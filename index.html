@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- ===== SEO（依 文件/SEO研究.md）===== -->
-<title>戰鬥陀螺X 最強配置排行｜真實賽事勝率梯度表 - BeyTop</title>
-<meta name="description" content="BeyTop 用真實賽事數據算出戰鬥陀螺X每個上蓋與配置的實戰勝率，做成最強配置梯度表（Tier List）。查最強陀螺、配置、選手戰績與比賽回看。">
+<title>戰鬥陀螺X 最強配置排行｜真實對戰勝率梯度表 - BeyTop</title>
+<meta name="description" content="BeyTop 用真實對戰數據算出戰鬥陀螺X每個上蓋與配置的實戰勝率，做成最強配置梯度表（Tier List）。查最強陀螺、配置、選手戰績與比賽回看。">
 <link rel="canonical" href="https://beytop.net/">
 <!-- 多語版本互指 -->
 <link rel="alternate" hreflang="zh-Hant" href="https://beytop.net/">
@@ -16,8 +16,8 @@
 <!-- 社群分享卡 Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BeyTop">
-<meta property="og:title" content="戰鬥陀螺X 最強配置排行｜真實賽事勝率梯度表">
-<meta property="og:description" content="用真實賽事數據算出每個上蓋與配置的實戰勝率，當前環境最強陀螺一次看。">
+<meta property="og:title" content="戰鬥陀螺X 最強配置排行｜真實對戰勝率梯度表">
+<meta property="og:description" content="用真實對戰數據算出每個上蓋與配置的實戰勝率，當前環境最強陀螺一次看。">
 <meta property="og:url" content="https://beytop.net/">
 <meta property="og:image" content="https://beytop.net/og-cover.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -29,7 +29,7 @@
   "@type":"WebSite",
   "name":"BeyTop",
   "url":"https://beytop.net/",
-  "description":"戰鬥陀螺X 真實賽事勝率配置排行（梯度表）",
+  "description":"戰鬥陀螺X 真實對戰勝率配置排行（梯度表）",
   "potentialAction":{
     "@type":"SearchAction",
     "target":"https://beytop.net/rankings?q={query}",
@@ -94,7 +94,7 @@
     <div class="nav-links">
       <a href="manage.html">賽事管理</a>
       <span class="nav-sep">｜</span>
-      <a href="rankings.html">配置排行</a>
+      <a href="/rankings/">配置排行</a>
     </div>
     <div class="nav-right">
       <a class="btn yt" href="#" rel="noopener">▶ YouTube</a>
@@ -106,13 +106,13 @@
 <header class="hero">
   <div class="wrap">
     <h1>戰鬥陀螺X　<span class="hl">最強配置排行</span></h1>
-    <p>真實賽事數據算出的勝率梯度表（Tier List）—— 辦比賽、查配置、看戰績、回看比賽，一站搞定。</p>
-    <form class="search" role="search" action="rankings.html" method="get">
+    <p>真實對戰數據算出的勝率梯度表（Tier List）—— 辦比賽、查配置、看戰績、回看比賽，一站搞定。</p>
+    <form class="search" role="search" action="/rankings/" method="get">
       <input type="search" name="q" placeholder="搜尋上蓋、配置或選手，例：魔導神杖、小明…" aria-label="搜尋戰鬥陀螺X 上蓋、配置或選手">
       <button class="btn primary" type="submit">搜尋</button>
     </form>
     <div class="hero-cta">
-      <a class="btn primary" href="rankings.html">看完整戰鬥陀螺X配置排行 →</a>
+      <a class="btn primary" href="/rankings/">看完整戰鬥陀螺X配置排行 →</a>
       <a class="btn hot" href="#" rel="noopener">🔥 精彩瞬間</a>
     </div>
     <div class="trust">
@@ -129,9 +129,9 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="tierTitle">本月最強陀螺 Top 10<span class="muted" id="tierNote">依勝率排序・場數 ≥ 10</span></h2>
-      <a href="rankings.html">看完整配置梯度表 →</a>
+      <a href="/rankings/">看完整配置梯度表 →</a>
     </div>
-    <p class="lead">以下為戰鬥陀螺X當前環境最強上蓋排行，依真實賽事勝率計算；可切換看配置、固鎖、軸心與選手排行。</p>
+    <p class="lead">以下為戰鬥陀螺X當前環境最強上蓋排行，依真實對戰；可切換看配置、固鎖、軸心與選手排行。</p>
 
     <div class="pills" id="pills">
       <button class="pill on" data-dim="blade">上蓋</button>
@@ -152,7 +152,7 @@
           <th data-k="appearances">場數<span class="ar"></span></th>
           <th class="src">影片來源</th>
         </tr></thead>
-        <tbody id="tierBody"></tbody>
+        <tbody id="tierBody"><!--SEO_ROWS:START--><tr><td class="rank">1</td><td class="combo">戰神爆擊W</td><td class="num wr">63.6%</td><td class="num">4.4%</td><td class="num">0.82</td><td class="num dim">22</td><td class="num src">—</td></tr><tr><td class="rank">2</td><td class="combo">飛龍懸浮</td><td class="num wr">62.5%</td><td class="num">3.2%</td><td class="num">1.12</td><td class="num dim">16</td><td class="num src">—</td></tr><tr><td class="rank">3</td><td class="combo">魔導神杖</td><td class="num wr">58.8%</td><td class="num">31.9%</td><td class="num">0.72</td><td class="num dim">160</td><td class="num src">—</td></tr><tr><td class="rank">4</td><td class="combo">霜輝銀狼</td><td class="num wr">58.3%</td><td class="num">4.8%</td><td class="num">0.83</td><td class="num dim">24</td><td class="num src">—</td></tr><tr><td class="rank">5</td><td class="combo">鈷藍青龍</td><td class="num wr">52.3%</td><td class="num">8.8%</td><td class="num">0.70</td><td class="num dim">44</td><td class="num src">—</td></tr><tr><td class="rank">6</td><td class="combo">鮫鯊狂鱗</td><td class="num wr">45.2%</td><td class="num">12.4%</td><td class="num">0.79</td><td class="num dim">62</td><td class="num src">—</td></tr><tr><td class="rank">7</td><td class="combo">鳳凰飛翼</td><td class="num wr">42.9%</td><td class="num">5.6%</td><td class="num">0.89</td><td class="num dim">28</td><td class="num src">—</td></tr><tr><td class="rank">8</td><td class="combo">空力天馬(藍)</td><td class="num wr">41.9%</td><td class="num">18.5%</td><td class="num">0.71</td><td class="num dim">93</td><td class="num src">—</td></tr><tr><td class="rank">9</td><td class="combo">塑膠紋章爆擊W</td><td class="num wr">35.7%</td><td class="num">2.8%</td><td class="num">0.50</td><td class="num dim">14</td><td class="num src">—</td></tr><tr><td class="rank">10</td><td class="combo">蒼龍爆刃</td><td class="num wr">16.7%</td><td class="num">2.4%</td><td class="num">0.42</td><td class="num dim">12</td><td class="num src">—</td></tr><!--SEO_ROWS:END--></tbody>
       </table>
     </div>
   </div>
@@ -161,7 +161,7 @@
 <section>
   <div class="wrap">
     <div class="cards">
-      <a class="card" href="rankings.html"><div class="ico">📊</div>
+      <a class="card" href="/rankings/"><div class="ico">📊</div>
         <h3>戰鬥陀螺X 配置排行</h3>
         <p>看完整梯度表，還能拆成上蓋／固鎖／軸心分別比強度，找出最佳組合。</p></a>
       <a class="card" href="players.html"><div class="ico">🧑</div>
@@ -195,10 +195,10 @@
 
 <footer>
   <div class="wrap foot-in">
-    <div>Bey<span style="color:var(--accent)">Top</span> ・ 用真實賽事數據算戰鬥陀螺X勝率</div>
+    <div>Bey<span style="color:var(--accent)">Top</span> ・ 用真實對戰數據算戰鬥陀螺X勝率</div>
     <div style="display:flex; gap:18px; flex-wrap:wrap">
       <a href="#">YouTube 頻道</a>
-      <a href="rankings.html">戰鬥陀螺X 配置排行</a>
+      <a href="/rankings/">戰鬥陀螺X 配置排行</a>
       <a href="players.html">選手戰績</a>
       <a href="events.html">比賽回看</a>
       <a href="about.html">關於 BeyTop</a>
@@ -225,7 +225,7 @@
   document.getElementById("stRounds").textContent  = D.total_rounds || "—";
   document.getElementById("stCombos").textContent  = (D.combos || []).length || "—";
 
-  // ===== 以下渲染函式與排行榜（rankings.html）一致，確保 Top10 顯示一模一樣 =====
+  // ===== 以下渲染函式與排行榜（/rankings/）一致，確保 Top10 顯示一模一樣 =====
   function pct(x){ return (x*100).toFixed(1) + '%'; }
   function wrColor(w){ return w>=0.6 ? 'var(--good)' : (w<=0.4 ? 'var(--bad)' : 'var(--mid)'); }
   function esc(s){ return (s==null?'':String(s)).replace(/[&<>"]/g,function(m){
@@ -418,7 +418,7 @@
     var c = currentRows[+tr.getAttribute('data-i')];
     if(!c) return;
     var q = (currentDim==='ratchet' || currentDim==='bit') ? c.key : bladeName(c);
-    location.href = 'rankings.html?q='+encodeURIComponent(q);
+    location.href = '/rankings/?q='+encodeURIComponent(q);
   });
 
   // ===== 表頭排序（只降冪 ▼）：點哪欄就把該欄重排，整庫取真前 10 =====
