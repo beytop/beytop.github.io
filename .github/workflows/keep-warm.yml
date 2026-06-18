@@ -1,0 +1,25 @@
+# 登入保溫（keep-warm）
+# 目的：每 5 分鐘戳一下 app.beytop.net 的登入端點，讓 Vercel serverless 函式維持溫熱，
+#       降低「第一次登入」的冷啟動延遲（實測冷 ~0.95s → 熱 ~0.43s）。
+# 限制：GitHub Actions 排程是 best-effort，可能延遲 5–15 分鐘，所以這是「緩解」不是根本解。
+#       根本解請到 Vercel 專案設定開啟「Fluid Compute」。要更準的保溫可改用 UptimeRobot 5 分鐘監測。
+# 備註：只 curl 公開 URL、不需任何 secrets；放在 beytop.github.io repo（有定期 push，排程不會被 GitHub 自動停用）。
+name: keep-warm
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # 每 5 分鐘
+  workflow_dispatch:         # 也可在 Actions 分頁手動觸發測試
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping login endpoint
+        run: |
+          for url in \
+            "https://app.beytop.net/auth/login?next=/organizer" \
+            "https://app.beytop.net/"; do
+            result=$(curl -s -o /dev/null -w "HTTP %{http_code}  TTFB %{time_starttransfer}s" --max-time 25 "$url" || echo "request failed")
+            echo "$url -> $result"
+          done

@@ -241,8 +241,9 @@
     var arr = c.blade_imgs || [];
     if(arr.length){
       var cls = arr.length>1 ? 'pic multi' : 'pic';
+      var dim = arr.length>1 ? 64 : 80;
       var imgs = arr.map(function(src){
-        return '<img class="'+cls+'" src="'+src+'" alt="" onerror="this.style.display=\'none\'">';
+        return '<img class="'+cls+'" src="'+src+'" loading="lazy" width="'+dim+'" height="'+dim+'" alt="" onerror="this.style.display=\'none\'">';
       }).join('');
       return '<span class="pics">'+imgs+'</span>';
     }
@@ -251,7 +252,7 @@
   // 固鎖／軸心：用零件圖（缺圖退回代號徽章）
   function partPic(type, code){
     return '<span class="pics">'
-      +'<img class="pic" src="data/images_parts/'+type+'/'+encodeURIComponent(code)+'.png" alt="" '
+      +'<img class="pic" src="data/images_parts/'+type+'/'+encodeURIComponent(code)+'.png" loading="lazy" width="80" height="80" alt="" '
         +'onerror="this.style.display=\'none\';this.parentNode.querySelector(\'.ph\').style.display=\'flex\'">'
       +'<div class="ph code" style="display:none">'+esc(code)+'</div>'
       +'</span>';

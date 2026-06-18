@@ -15702,5 +15702,2744 @@
         }
       ]
     }
+  ],
+  "players": [
+    {
+      "name": "Sousuke",
+      "slug": "sousuke",
+      "battles": 6,
+      "wins": 6,
+      "losses": 0,
+      "draws": 0,
+      "winrate": 1.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 B",
+          "n": 8,
+          "wins": 8,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Silver Sterling Wolf 9-70 FB",
+          "n": 6,
+          "wins": 5,
+          "winrate": 0.8333
+        },
+        {
+          "combo": "Aero Pegasus 7-60 R",
+          "n": 5,
+          "wins": 4,
+          "winrate": 0.8
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Khaleed",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Shao Wei Yang",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Jarvis Law",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Emmanuel Marcelino",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "13-リリナ",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "TGしずく",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Balya",
+      "slug": "balya",
+      "battles": 5,
+      "wins": 3,
+      "losses": 2,
+      "draws": 0,
+      "winrate": 0.6,
+      "top_combos": [
+        {
+          "combo": "Cobalt Dragoon 5-60 E",
+          "n": 7,
+          "wins": 5,
+          "winrate": 0.7143
+        },
+        {
+          "combo": "Scale Shark 1-70 LR",
+          "n": 5,
+          "wins": 3,
+          "winrate": 0.6
+        },
+        {
+          "combo": "Wand Wizard 1-60 H",
+          "n": 5,
+          "wins": 1,
+          "winrate": 0.2
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Berguiny",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Sebastian",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Calvin",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Leobardo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "name": "Kim Jung U",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Berguiny",
+      "slug": "berguiny",
+      "battles": 5,
+      "wins": 3,
+      "losses": 2,
+      "draws": 0,
+      "winrate": 0.6,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-70 B",
+          "n": 6,
+          "wins": 5,
+          "winrate": 0.8333
+        },
+        {
+          "combo": "Blast Valkerion W 9-60 FB",
+          "n": 5,
+          "wins": 4,
+          "winrate": 0.8
+        },
+        {
+          "combo": "Hover Wyvern 7-60 LR",
+          "n": 3,
+          "wins": 3,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Aero Pegasus 1-60 R",
+          "n": 3,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Kim Jung U",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Marcelo",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Hsu Jui Sheng",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Balya",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "name": "Leobardo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Kim Jung U",
+      "slug": "kim-jung-u",
+      "battles": 5,
+      "wins": 3,
+      "losses": 2,
+      "draws": 0,
+      "winrate": 0.6,
+      "top_combos": [
+        {
+          "combo": "Scale Shark 1-60 FB",
+          "n": 8,
+          "wins": 4,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 7-60 R",
+          "n": 7,
+          "wins": 4,
+          "winrate": 0.5714
+        },
+        {
+          "combo": "Blast PlasticChip W 9-60 H",
+          "n": 5,
+          "wins": 1,
+          "winrate": 0.2
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Adrian",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Bleu",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Balya",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Berguiny",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "name": "Leobardo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Leobardo",
+      "slug": "leobardo",
+      "battles": 5,
+      "wins": 5,
+      "losses": 0,
+      "draws": 0,
+      "winrate": 1.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 1-60 H",
+          "n": 10,
+          "wins": 9,
+          "winrate": 0.9
+        },
+        {
+          "combo": "Scale Shark 3-60 LR",
+          "n": 7,
+          "wins": 6,
+          "winrate": 0.8571
+        },
+        {
+          "combo": "Aero Pegasus 7-60 L",
+          "n": 5,
+          "wins": 1,
+          "winrate": 0.2
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Balya",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Kim Jung U",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Minato",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Aiman",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Berguiny",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Omanju King",
+      "slug": "omanju-king",
+      "battles": 5,
+      "wins": 4,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.8,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 3-60 R",
+          "n": 7,
+          "wins": 5,
+          "winrate": 0.7143
+        },
+        {
+          "combo": "Wand Wizard 9-60 B",
+          "n": 5,
+          "wins": 4,
+          "winrate": 0.8
+        },
+        {
+          "combo": "Soar Phoenix 1-60 LR",
+          "n": 5,
+          "wins": 3,
+          "winrate": 0.6
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Yoo Ha Jun",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Xavier",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Akmal",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "ひーたん",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Fahreddin",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Fahreddin",
+      "slug": "fahreddin",
+      "battles": 4,
+      "wins": 4,
+      "losses": 0,
+      "draws": 0,
+      "winrate": 1.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 1-60 H",
+          "n": 6,
+          "wins": 6,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Hover Wyvern 9-60 R",
+          "n": 5,
+          "wins": 4,
+          "winrate": 0.8
+        },
+        {
+          "combo": "Scale Shark 7-70 LR",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Omanju King",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Kyle",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Elena Bey",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Taylor",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Kyle",
+      "slug": "kyle",
+      "battles": 4,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.75,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 FB",
+          "n": 6,
+          "wins": 5,
+          "winrate": 0.8333
+        },
+        {
+          "combo": "Aero Pegasus 1-60 R",
+          "n": 6,
+          "wins": 3,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Scale Shark 3-60 LR",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Yoo Ha Jun",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Matt",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Dubon",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Fahreddin",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Mi Hee Youn",
+      "slug": "mi-hee-youn",
+      "battles": 4,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.75,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 B",
+          "n": 6,
+          "wins": 4,
+          "winrate": 0.6667
+        },
+        {
+          "combo": "Aero Pegasus 7-60 R",
+          "n": 5,
+          "wins": 3,
+          "winrate": 0.6
+        },
+        {
+          "combo": "Cobalt Dragoon 5-60 E",
+          "n": 3,
+          "wins": 3,
+          "winrate": 1.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Abe",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Crimson",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Jerry",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Zane",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Min Seo Jo",
+      "slug": "min-seo-jo",
+      "battles": 4,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.75,
+      "top_combos": [
+        {
+          "combo": "Cobalt Dragoon 5-60 E",
+          "n": 7,
+          "wins": 6,
+          "winrate": 0.8571
+        },
+        {
+          "combo": "Aero Pegasus 3-60 R",
+          "n": 5,
+          "wins": 2,
+          "winrate": 0.4
+        },
+        {
+          "combo": "Soar Phoenix 9-60 L",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        },
+        {
+          "combo": "Chain Incendio 9-60 B",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Zenshi",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Alvis",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Jarvis Law",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Emmanuel Marcelino",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Yoo Ha Jun",
+      "slug": "yoo-ha-jun",
+      "battles": 4,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 1-60 FB",
+          "n": 8,
+          "wins": 6,
+          "winrate": 0.75
+        },
+        {
+          "combo": "Scale Shark 4-50 L",
+          "n": 6,
+          "wins": 2,
+          "winrate": 0.3333
+        },
+        {
+          "combo": "Blast Valkerion W 9-60 LR",
+          "n": 5,
+          "wins": 2,
+          "winrate": 0.4
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Gan Hao",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Kurigura",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Omanju King",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "name": "Kyle",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Zane",
+      "slug": "zane",
+      "battles": 4,
+      "wins": 4,
+      "losses": 0,
+      "draws": 0,
+      "winrate": 1.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 FB",
+          "n": 5,
+          "wins": 5,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Cobalt Dragoon 1-60 E",
+          "n": 5,
+          "wins": 3,
+          "winrate": 0.6
+        },
+        {
+          "combo": "Aero Pegasus 3-60 L",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        },
+        {
+          "combo": "Buster Dran 3-60 T",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Aero Pegasus 9-60 FB",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Shun Da Gu",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Por",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Mark Jules Barrientes",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Mi Hee Youn",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Adrian",
+      "slug": "adrian",
+      "battles": 3,
+      "wins": 2,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.6667,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 FB",
+          "n": 5,
+          "wins": 4,
+          "winrate": 0.8
+        },
+        {
+          "combo": "Aero Pegasus 7-60 R",
+          "n": 4,
+          "wins": 1,
+          "winrate": 0.25
+        },
+        {
+          "combo": "Scale Shark 3-60 LR",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Vivan",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Charlie",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Kim Jung U",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Emmanuel Marcelino",
+      "slug": "emmanuel-marcelino",
+      "battles": 3,
+      "wins": 2,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.6667,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 7-70 L",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        },
+        {
+          "combo": "Wand Wizard 9-60 B",
+          "n": 3,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Silver Sterling Wolf 3-60 FB",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 9-60 FB",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Silver Sterling Wolf 3-60 B",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Javier",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Min Seo Jo",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Sousuke",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Jarvis Law",
+      "slug": "jarvis-law",
+      "battles": 3,
+      "wins": 1,
+      "losses": 2,
+      "draws": 0,
+      "winrate": 0.3333,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 3-60 R",
+          "n": 4,
+          "wins": 1,
+          "winrate": 0.25
+        },
+        {
+          "combo": "Silver Sterling Wolf 9-70 FB",
+          "n": 3,
+          "wins": 1,
+          "winrate": 0.3333
+        },
+        {
+          "combo": "Wand Wizard 9-60 O",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Chain Incendio 9-60 O",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Eric",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Sousuke",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "name": "Min Seo Jo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Jerry",
+      "slug": "jerry",
+      "battles": 3,
+      "wins": 2,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.6667,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 H",
+          "n": 5,
+          "wins": 3,
+          "winrate": 0.6
+        },
+        {
+          "combo": "Soar Phoenix 7-60 R",
+          "n": 3,
+          "wins": 1,
+          "winrate": 0.3333
+        },
+        {
+          "combo": "Beat Tyranno 5-60 T",
+          "n": 3,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Beat Tyranno 5-60 P",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Tatsuki",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Mark Jules Barrientes",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Mi Hee Youn",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Marcelo",
+      "slug": "marcelo",
+      "battles": 3,
+      "wins": 2,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.6667,
+      "top_combos": [
+        {
+          "combo": "Blast Valkerion W 9-60 H",
+          "n": 5,
+          "wins": 4,
+          "winrate": 0.8
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 5,
+          "wins": 2,
+          "winrate": 0.4
+        },
+        {
+          "combo": "Scale Shark 4-50 LR",
+          "n": 3,
+          "wins": 1,
+          "winrate": 0.3333
+        }
+      ],
+      "opponents": [
+        {
+          "name": "William",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Sebastian",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Berguiny",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Mark Jules Barrientes",
+      "slug": "mark-jules-barrientes",
+      "battles": 3,
+      "wins": 1,
+      "losses": 2,
+      "draws": 0,
+      "winrate": 0.3333,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 B",
+          "n": 4,
+          "wins": 1,
+          "winrate": 0.25
+        },
+        {
+          "combo": "Soar Phoenix 1-60 R",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        },
+        {
+          "combo": "Buster Dran 5-60 Q",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Cobalt Dragoon 1-60 R",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Buster Dran 5-60 L",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Jimmy Lam",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Zane",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "name": "Jerry",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Minato",
+      "slug": "minato",
+      "battles": 3,
+      "wins": 2,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.6667,
+      "top_combos": [
+        {
+          "combo": "Blast PlasticChip W 9-70 FB",
+          "n": 5,
+          "wins": 3,
+          "winrate": 0.6
+        },
+        {
+          "combo": "Wand Wizard 7-70 LR",
+          "n": 5,
+          "wins": 3,
+          "winrate": 0.6
+        },
+        {
+          "combo": "Aero Pegasus 7-60 R",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Tang Jit An",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Zhu Tong Yu",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Leobardo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Tatsuki",
+      "slug": "tatsuki",
+      "battles": 3,
+      "wins": 2,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.6667,
+      "top_combos": [
+        {
+          "combo": "Silver Sterling Wolf 9-60 E",
+          "n": 4,
+          "wins": 3,
+          "winrate": 0.75
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 4,
+          "wins": 3,
+          "winrate": 0.75
+        },
+        {
+          "combo": "Aero Pegasus 1-60 LF",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Aero Pegasus 7-60 R",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Mokky",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "姫",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Jerry",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "13-リリナ",
+      "slug": "13-リリナ",
+      "battles": 2,
+      "wins": 0,
+      "losses": 2,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 9-60 R",
+          "n": 3,
+          "wins": 1,
+          "winrate": 0.3333
+        },
+        {
+          "combo": "Buster Dran 9-70 LF",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Sousuke",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "name": "そら",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Akmal",
+      "slug": "akmal",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Blast Valkerion W 9-60 H",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        },
+        {
+          "combo": "Wand Wizard 3-60 FB",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Scale Shark 4-50 LR",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Jerry Yu",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Omanju King",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Charlie",
+      "slug": "charlie",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Silver Sterling Wolf 6-70 H",
+          "n": 3,
+          "wins": 3,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Wand Wizard 9-60 FB",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Hammer Incendio 1-70 R",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Cannon",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Adrian",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Kurigura",
+      "slug": "kurigura",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Scale Shark 3-60 LR",
+          "n": 4,
+          "wins": 3,
+          "winrate": 0.75
+        },
+        {
+          "combo": "Wand Wizard 1-60 WB",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        },
+        {
+          "combo": "Aero Pegasus 7-60 K",
+          "n": 3,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Yunsin",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Yoo Ha Jun",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Mokky",
+      "slug": "mokky",
+      "battles": 2,
+      "wins": 0,
+      "losses": 2,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 7-60 HN",
+          "n": 4,
+          "wins": 2,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 3,
+          "wins": 1,
+          "winrate": 0.3333
+        },
+        {
+          "combo": "Cobalt Dragoon 9-60 E",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Tatsuki",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "name": "バード",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sebastian",
+      "slug": "sebastian",
+      "battles": 2,
+      "wins": 0,
+      "losses": 2,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Mail Knight 3-60 W",
+          "n": 4,
+          "wins": 2,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 9-60 LO",
+          "n": 3,
+          "wins": 1,
+          "winrate": 0.3333
+        },
+        {
+          "combo": "Hover Wyvern 1-60 R",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Balya",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "name": "Marcelo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "TGしずく",
+      "slug": "tgしずく",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Tide Whale 3-60 LF",
+          "n": 3,
+          "wins": 1,
+          "winrate": 0.3333
+        },
+        {
+          "combo": "Cobalt Dragoon 9-60 E",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Aero Pegasus 1-60 R",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "そら",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Sousuke",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Zhu Tong Yu",
+      "slug": "zhu-tong-yu",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 1-60 H",
+          "n": 4,
+          "wins": 1,
+          "winrate": 0.25
+        },
+        {
+          "combo": "Blast Valkerion W 3-60 R",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        },
+        {
+          "combo": "Scale Shark 9-60 FB",
+          "n": 3,
+          "wins": 1,
+          "winrate": 0.3333
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Thomas",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Minato",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "そら",
+      "slug": "そら",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Soar Phoenix 5-60 R",
+          "n": 3,
+          "wins": 2,
+          "winrate": 0.6667
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 3,
+          "wins": 1,
+          "winrate": 0.3333
+        },
+        {
+          "combo": "Aero Pegasus 9-60 C",
+          "n": 2,
+          "wins": 2,
+          "winrate": 1.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "13-リリナ",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "TGしずく",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "ひーたん",
+      "slug": "ひーたん",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 7-60 R",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Spear Scorpio 9-60 FB",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "ユウ",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Omanju King",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "バード",
+      "slug": "バード",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Cobalt Dragoon 9-60 E",
+          "n": 4,
+          "wins": 2,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 4,
+          "wins": 2,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Aero Pegasus 1-60 R",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Mokky",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "姫",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "ユウ",
+      "slug": "ユウ",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 7-60 R",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Blast PlasticChip W 9-60 FB",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "たこいと",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "ひーたん",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "姫",
+      "slug": "姫",
+      "battles": 2,
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.5,
+      "top_combos": [
+        {
+          "combo": "Buster Dran 1-60 A",
+          "n": 4,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Dran Sword 3-60 F",
+          "n": 3,
+          "wins": 3,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Soar Phoenix 4-60 R",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        }
+      ],
+      "opponents": [
+        {
+          "name": "バード",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "name": "Tatsuki",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Abe",
+      "slug": "abe",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Soar Phoenix 3-60 R",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Mi Hee Youn",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Aiman",
+      "slug": "aiman",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Soar Phoenix 5-60 LR",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 3-60 H",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Scale Shark 1-60 R",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Leobardo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Alvis",
+      "slug": "alvis",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 1-60 R",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Cobalt Dragoon 9-70 E",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Min Seo Jo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Bleu",
+      "slug": "bleu",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Hover Wyvern 1-70 LR",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Aero Pegasus 3-60 L",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 7-60 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Kim Jung U",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Calvin",
+      "slug": "calvin",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 FB",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Scale Shark 1-60 R",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 5-60 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Balya",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Cannon",
+      "slug": "cannon",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Blast PlasticChip J 3-60 LR",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 1-60 FB",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 5-60 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Charlie",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Crimson",
+      "slug": "crimson",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 B",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 5-60 E",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Aero Pegasus 1-60 L",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Mi Hee Youn",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Dubon",
+      "slug": "dubon",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Scale Shark 3-60 LR",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Hover Wyvern 9-60 R",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Wand Wizard 1-60 H",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Kyle",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Elena Bey",
+      "slug": "elena-bey",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 1-60 H",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Aero Pegasus 9-60 LR",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Soar Phoenix 3-60 R",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Fahreddin",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Eric",
+      "slug": "eric",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Cobalt Dragoon 1-60 E",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Silver Sterling Wolf 3-60 H",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Saber Samurai 9-60 L",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Jarvis Law",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Gan Hao",
+      "slug": "gan-hao",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 1-60 H",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Aero Pegasus 7-60 P",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Scale Shark 3-60 LR",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Yoo Ha Jun",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Hsu Jui Sheng",
+      "slug": "hsu-jui-sheng",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 2,
+          "wins": 2,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Blast PlasticChip W 7-60 H",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Silver Sterling Wolf 9-60 FB",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Berguiny",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Javier",
+      "slug": "javier",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 FB",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 1-60 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Emmanuel Marcelino",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Jerry Yu",
+      "slug": "jerry-yu",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [],
+      "opponents": [
+        {
+          "name": "Akmal",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Jimmy Lam",
+      "slug": "jimmy-lam",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 B",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Aero Pegasus 1-60 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Beat Tyranno 5-60 P",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Mark Jules Barrientes",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Khaleed",
+      "slug": "khaleed",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 5-60 P",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Beat Tyranno 1-60 B",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Soar Phoenix 3-60 O",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Sousuke",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Matt",
+      "slug": "matt",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Scale Shark 3-60 LR",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 5-60 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Kyle",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Por",
+      "slug": "por",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 1-60 R",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 9-60 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Buster Dran 5-60 LF",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Zane",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Shao Wei Yang",
+      "slug": "shao-wei-yang",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Silver Sterling Wolf 9-60 FB",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 9-70 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Sousuke",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Shun Da Gu",
+      "slug": "shun-da-gu",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 9-60 H",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Wand Wizard 3-60 B",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Soar Phoenix 1-60 R",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Zane",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Tang Jit An",
+      "slug": "tang-jit-an",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Blast Valkerion W 7-60 LR",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Scale Shark 1-60 LO",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Wand Wizard 9-60 H",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Minato",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Taylor",
+      "slug": "taylor",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Buster Dran 7-60 UF",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Scale Shark 3-60 LR",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Fahreddin",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Thomas",
+      "slug": "thomas",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Hover Wyvern 9-60 UN",
+          "n": 2,
+          "wins": 2,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Keel Shark 3-60 LR",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Scale Shark 4-50 L",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Zhu Tong Yu",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Vivan",
+      "slug": "vivan",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 B",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Hover Wyvern 3-60 R",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 5-60 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Adrian",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "William",
+      "slug": "william",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Scale Shark 3-60 K",
+          "n": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "combo": "Wand Wizard 1-60 H",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Soar Phoenix 9-60 P",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Marcelo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Xavier",
+      "slug": "xavier",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Scale Shark 1-60 LR",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Aero Pegasus 7-60 L",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Wand Wizard 9-60 FB",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Omanju King",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Yunsin",
+      "slug": "yunsin",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Scale Shark 1-70 R",
+          "n": 2,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Wand Wizard 1-60 L",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Soar Phoenix 7-60 K",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Kurigura",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Zenshi",
+      "slug": "zenshi",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Wand Wizard 9-60 B",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Aero Pegasus 3-60 R",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Cobalt Dragoon 1-60 E",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "Min Seo Jo",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "たこいと",
+      "slug": "たこいと",
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winrate": 0.0,
+      "top_combos": [
+        {
+          "combo": "Aero Pegasus 7-60 LR",
+          "n": 1,
+          "wins": 1,
+          "winrate": 1.0
+        },
+        {
+          "combo": "Silver Sterling Wolf 9-60 H",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        },
+        {
+          "combo": "Soar Phoenix 7-70 R",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ],
+      "opponents": [
+        {
+          "name": "ユウ",
+          "n": 1,
+          "wins": 0,
+          "winrate": 0.0
+        }
+      ]
+    }
   ]
 }
