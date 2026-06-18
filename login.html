@@ -4,99 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>登入 — BeyTop</title>
+<!-- 登入已移到報到 app（app.beytop.net）。此頁退役，保留檔名只做轉址，避免舊書籤/外連 404。 -->
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=https://app.beytop.net/auth/login?next=/organizer">
+<link rel="canonical" href="https://app.beytop.net/auth/login">
 <style>
-  :root{
-    --bg:#0f1115; --panel:#171a21; --line:#262b36; --txt:#e6e8ec; --dim:#8b93a3;
-    --accent:#4d8dff; --good:#39d98a; --bad:#ff5d6c;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--txt);
-       font-family:"Segoe UI","Microsoft JhengHei",system-ui,sans-serif;font-size:14px;
-       min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
-        padding:28px 24px;width:100%;max-width:360px;text-align:center}
-  h1{font-size:22px;margin:0 0 4px;letter-spacing:.3px}
-  .sub{color:var(--dim);font-size:13px;margin-bottom:22px}
-  button{font-family:inherit;font-size:14px;border-radius:10px;cursor:pointer;
-         border:1px solid var(--line);padding:11px 16px;width:100%}
-  .gbtn{background:#fff;color:#1f1f1f;font-weight:600;
-        display:flex;align-items:center;justify-content:center;gap:10px}
-  .gbtn:hover{filter:brightness(.96)}
-  .gbtn img{width:18px;height:18px}
-  .out{background:transparent;color:var(--dim);margin-top:14px}
-  .out:hover{color:var(--txt);border-color:var(--accent)}
-  .hi{font-size:17px;font-weight:700;margin-bottom:2px}
-  .email{color:var(--dim);font-size:13px;margin-bottom:16px;word-break:break-all}
-  .badges{display:flex;gap:8px;justify-content:center;margin-bottom:20px;flex-wrap:wrap}
-  .badge{font-size:12px;font-weight:600;border-radius:999px;padding:4px 12px;
-         border:1px solid var(--line);color:var(--dim)}
-  .badge.on{color:var(--good);border-color:var(--good)}
-  .loading{color:var(--dim)}
-  .err{color:var(--bad);font-size:13px;margin-top:14px;min-height:18px}
-  .hidden{display:none}
+  body{margin:0;background:#0f1115;color:#8b93a3;
+       font-family:"Segoe UI","Microsoft JhengHei",system-ui,sans-serif;
+       min-height:100vh;display:flex;align-items:center;justify-content:center}
+  a{color:#4d8dff}
 </style>
 </head>
 <body>
-  <div class="card">
-    <h1>BeyTop</h1>
-    <div class="sub">主辦方與選手共用登入</div>
-
-    <div id="loading" class="loading">載入中…</div>
-
-    <!-- 未登入 -->
-    <div id="signin" class="hidden">
-      <button id="googleBtn" class="gbtn">
-        <img src="https://www.google.com/favicon.ico" alt="">使用 Google 登入
-      </button>
-    </div>
-
-    <!-- 已登入 -->
-    <div id="profile" class="hidden">
-      <div class="hi" id="pName"></div>
-      <div class="email" id="pEmail"></div>
-      <div class="badges">
-        <span class="badge on">選手</span>
-        <span class="badge" id="orgBadge">主辦方</span>
-      </div>
-      <button id="logoutBtn" class="out">登出</button>
-    </div>
-
-    <div id="err" class="err"></div>
-  </div>
-
-<script type="module">
-  import { signInWithGoogle, signOut, getSessionUser, getProfile } from './auth.js';
-
-  const $ = id => document.getElementById(id);
-  const show = (id, on) => $(id).classList.toggle('hidden', !on);
-  const setErr = msg => { $('err').textContent = msg || ''; };
-
-  async function render() {
-    setErr('');
-    show('loading', true); show('signin', false); show('profile', false);
-
-    const user = await getSessionUser();
-    if (!user) {
-      show('loading', false); show('signin', true);
-      return;
-    }
-
-    const prof = await getProfile();
-    $('pName').textContent = '你好，' + ((prof && prof.display_name) || user.email);
-    $('pEmail').textContent = (prof && prof.email) || user.email;
-
-    const isOrg = !!(prof && prof.is_organizer);
-    $('orgBadge').classList.toggle('on', isOrg);
-    $('orgBadge').textContent = isOrg ? '主辦方' : '主辦方（未開通）';
-
-    show('loading', false); show('profile', true);
-  }
-
-  $('googleBtn').onclick = () =>
-    signInWithGoogle().catch(e => setErr('登入失敗：' + e.message));
-  $('logoutBtn').onclick = async () => { await signOut(); render(); };
-
-  render();
-</script>
+  <p>前往登入中…若沒有自動跳轉，請點 <a href="https://app.beytop.net/auth/login?next=/organizer">這裡</a>。</p>
+  <script>location.replace('https://app.beytop.net/auth/login?next=/organizer');</script>
 </body>
 </html>
