@@ -12,8 +12,11 @@ __pycache__/
 data/main.json
 文件/
 
-# ===== 不上傳：本機設定 =====
+# ===== 不上傳：本機設定 / 祕密 / 備份 =====
 .claude/
+*.env.local
+.env.local
+db備份/
 
 # ===== 不上傳：系統雜檔 =====
 Thumbs.db
