@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== SEO（未登入介紹頁，鎖「辦比賽／報到系統／主辦」吸店家）===== -->
+<title>用 BeyTop 辦戰鬥陀螺X比賽｜線上報到・抽籤分位・對戰表 - 賽事管理</title>
+<meta name="description" content="BeyTop 賽事管理：戰鬥陀螺X 主辦方免費工具。掃 QR 線上報到、自動抽籤分賽位、產生比賽對戰表，報到名單直接變成乾淨賽事數據。開店辦比賽不再用紙本點名。">
+<link rel="canonical" href="https://beytop.net/manage.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BeyTop">
+<meta property="og:title" content="用 BeyTop 辦戰鬥陀螺X比賽｜線上報到・抽籤・對戰表">
+<meta property="og:description" content="戰鬥陀螺X 主辦方免費工具：掃 QR 報到、抽籤分位、對戰表，報到即數據。">
+<meta property="og:url" content="https://beytop.net/manage">
+<meta property="og:image" content="https://beytop.net/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1d212b; --line:#262b36;
+    --txt:#e6e8ec; --dim:#8b93a3; --accent:#4d8dff; --good:#39d98a;
+    --warn:#f5c451; --bad:#ff5d6c; --yt:#ff3b30;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--bg); color:var(--txt);
+    font-family:"Segoe UI","Microsoft JhengHei",system-ui,sans-serif; font-size:15px; line-height:1.5}
+  a{color:inherit; text-decoration:none}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 20px}
+
+  nav{position:sticky; top:0; z-index:10; background:rgba(15,17,21,.92);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+  .nav-in{display:flex; align-items:center; gap:22px; height:74px}
+  .logo{font-size:30px; font-weight:800; letter-spacing:.5px}
+  .logo span{color:var(--accent)}
+  .logo small{display:block; font-size:15px; color:var(--txt); font-weight:800; letter-spacing:2px}
+  .nav-links{display:flex; gap:20px; font-size:19px; font-weight:700; color:var(--dim); align-items:center}
+  .nav-links a:hover{color:var(--txt)}
+  .nav-links a.manage.active{color:var(--accent)}
+  .nav-right{margin-left:auto; display:flex; align-items:center; gap:10px; position:relative}
+  .nav-right .btn{font-size:19px}
+  .btn{border:1px solid var(--line); border-radius:8px; padding:8px 14px; font-size:14px;
+    cursor:pointer; background:transparent; color:var(--txt); font-family:inherit; display:inline-flex; align-items:center; gap:8px}
+  .btn:hover{border-color:var(--accent)}
+  .btn.primary{background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600}
+  .btn.yt{background:var(--yt); border-color:var(--yt); color:#fff; font-weight:600}
+  .btn.login{font-weight:600}
+
+  /* 介紹頁（未登入） */
+  .hero{padding:54px 0 30px; text-align:center;
+    background:radial-gradient(1200px 380px at 50% -120px, rgba(77,141,255,.16), transparent)}
+  .hero .kick{color:var(--accent); font-weight:700; font-size:14px; letter-spacing:1px}
+  .hero h1{font-size:36px; font-weight:800; letter-spacing:.5px; line-height:1.25; margin-top:10px}
+  .hero h1 .hl{color:var(--accent)}
+  .hero p{color:var(--dim); margin-top:14px; font-size:16px; max-width:640px; margin-left:auto; margin-right:auto}
+  .hero-cta{margin-top:22px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
+  .gbtn{background:#fff; color:#1f1f1f; font-weight:600; border:1px solid #fff}
+  .gbtn:hover{filter:brightness(.95); border-color:#fff}
+  .gbtn img{width:18px; height:18px}
+  .free{color:var(--dim); font-size:13px; margin-top:12px}
+
+  .feat{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:8px}
+  .steps{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:6px; color:var(--dim); font-size:14px}
+  .steps span{background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:7px 14px}
+
+  section{padding:30px 0}
+  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px;
+    transition:.15s; position:relative; display:block}
+  .card .ico{font-size:26px}
+  .card h3{margin:12px 0 6px; font-size:17px}
+  .card p{color:var(--dim); font-size:13px; line-height:1.6}
+
+  footer{border-top:1px solid var(--line); margin-top:30px; padding:26px 0; color:var(--dim); font-size:13px; text-align:center}
+
+  @media(max-width:720px){
+    .nav-links{display:none}
+    .hero h1{font-size:25px}
+    .feat,.cards{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="/" class="logo" aria-label="BeyTop 戰鬥陀螺X 戰績網">Bey<span>Top</span><small>戰鬥陀螺X 戰績網</small></a>
+    <div class="nav-links">
+      <a href="manage.html" class="manage active">賽事管理</a>
+      <span class="nav-sep">｜</span>
+      <a href="rankings.html">配置排行</a>
+    </div>
+    <div class="nav-right">
+      <a class="btn yt" href="#" rel="noopener">▶ YouTube</a>
+      <a class="btn login" href="login.html">登入</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== 未登入：公開介紹頁（SEO） ===================== -->
+<div id="landing">
+  <header class="hero">
+    <div class="wrap">
+      <div class="kick">BEYTOP 賽事管理・免費</div>
+      <h1>用 BeyTop <span class="hl">辦戰鬥陀螺X比賽</span></h1>
+      <p>想在自己的店辦比賽，最怕報到塞車、賽程喬不完？BeyTop 幫你全部搞定 —— 選手掃 QR 線上報到、自動抽籤分賽位、一鍵產生對戰表。</p>
+      <div class="hero-cta">
+        <a class="btn gbtn" href="login.html">
+          <img src="https://www.google.com/favicon.ico" alt="">用 Google 登入開始
+        </a>
+        <a class="btn" href="about.html">了解 BeyTop →</a>
+      </div>
+      <div class="free">選手掃碼報到，免下載、免註冊，現場不塞車</div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="cards feat">
+        <div class="card"><div class="ico">📋</div><h3>比賽報到系統</h3>
+          <p>選手掃 QR 填暱稱與陀螺配置、自動拿賽位號；現場看板即時看誰到了、誰繳費，免紙本點名、不用排隊。</p></div>
+        <div class="card"><div class="ico">🏆</div><h3>自動抽籤・對戰表賽程</h3>
+          <p>報到截止一鍵抽籤分位、自動產生對戰表（單／雙淘汰、循環賽），晉級即時更新，再也不用手畫白板賽程。</p></div>
+        <div class="card"><div class="ico">🏅</div><h3>冠亞殿賽果圖</h3>
+          <p>比賽結束自動生成冠亞殿與對戰結果圖，一鍵發 LINE 群、社群，比賽辦得體面又順手幫你宣傳。</p></div>
+      </div>
+      <div class="steps">
+        <span>1・建賽事</span><span>2・產 QR</span><span>3・選手掃碼報到</span><span>4・開賽・對戰表</span><span>5・賽程管理</span><span>6・冠亞殿賽果圖可分享</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>© 2026 BeyTop ・ 賽事管理</footer>
+
+</body>
+</html>

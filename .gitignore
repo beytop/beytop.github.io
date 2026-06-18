@@ -1,6 +1,7 @@
 # ===== 不上傳：建置腳本與本機工具（保護分析方法論）=====
 *.py
 *.bat
+*.ps1
 __pycache__/
 *.pyc
 .hook_state.json
