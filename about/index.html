@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/">
+
+<!-- ===== SEO（依 文件/SEO研究.md）===== -->
+<title>關於 BeyTop｜戰鬥陀螺X 勝率數據怎麼來、怎麼算</title>
+<meta name="description" content="BeyTop 是戰鬥陀螺X 真實對戰數據平台：勝率全部取自實際比賽的逐回合紀錄，不靠投票或感覺。看我們的數據來源、勝率算法、入榜門檻與更新方式。">
+<link rel="canonical" href="https://beytop.net/about/">
+<meta name="robots" content="index,follow">
+<!-- 社群分享卡 Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BeyTop">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="關於 BeyTop｜戰鬥陀螺X 勝率數據怎麼來、怎麼算">
+<meta property="og:description" content="戰鬥陀螺X 真實對戰數據平台：勝率取自實際比賽逐回合紀錄。看數據來源、勝率算法與更新方式。">
+<meta property="og:url" content="https://beytop.net/about/">
+<meta property="og:image" content="https://beytop.net/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- 結構化資料：品牌實體（餵搜尋引擎／AI 知道 BeyTop 是誰）-->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"BeyTop",
+  "url":"https://beytop.net/",
+  "logo":"https://beytop.net/og-cover.png",
+  "description":"戰鬥陀螺X 真實對戰勝率配置排行（梯度表）與賽事回看、現場報到平台。",
+  "sameAs":[]
+}
+</script>
+<!-- 結構化資料：麵包屑（會顯示 rich result）-->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"首頁","item":"https://beytop.net/"},
+    {"@type":"ListItem","position":2,"name":"關於 BeyTop","item":"https://beytop.net/about/"}
+  ]
+}
+</script>
+<!-- 結構化資料：FAQ（餵 AI／語意，非 SERP rich result；FAQ rich result 已於 2026/5 全面停用）-->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"BeyTop 是什麼？","acceptedAnswer":{"@type":"Answer","text":"BeyTop 是戰鬥陀螺X（Beyblade X）的真實對戰數據平台，把每個上蓋、配置、選手的實戰勝率做成可排序的梯度表（Tier List），同時提供比賽回看與主辦方現場報到工具。"}},
+    {"@type":"Question","name":"BeyTop 的勝率是怎麼算的？","acceptedAnswer":{"@type":"Answer","text":"勝率＝該配置贏的回合數 ÷ 出場回合數，全部取自真實對戰的逐回合紀錄，不是投票或憑感覺。為避免少數場次造成偏差，需累積到一定場數才會列入排行。"}},
+    {"@type":"Question","name":"BeyTop 的數據從哪裡來？","acceptedAnswer":{"@type":"Answer","text":"來自真實對戰：YouTube 上的賽事影片，以及主辦方在現場報到系統登錄的對戰結果。每一場都對應得到影片來源，可回看驗證。"}},
+    {"@type":"Question","name":"資料多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"持續收錄新賽事後重新計算，數據隨之更新；排行頁以本月／本季的最新環境為主。"}}
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  /* 關於頁專屬樣式（共用樣式在 assets/site.css）。覆寫規則放在 link 之後 */
+  .crumbs{color:var(--dim);font-size:12px;margin:16px 0 10px}
+  .crumbs a{color:var(--dim)}
+  .crumbs a:hover{color:var(--accent)}
+  .about h1{font-size:30px;font-weight:800;line-height:1.25;margin:6px 0 10px}
+  .about .lead{color:var(--dim);font-size:16px;line-height:1.7;max-width:760px;margin:0 0 8px}
+  .about section{padding:26px 0;border-top:1px solid var(--line)}
+  .about section:first-of-type{border-top:0}
+  .about h2{font-size:21px;font-weight:700;margin:0 0 12px}
+  .about p{color:var(--dim);font-size:15px;line-height:1.8;max-width:780px;margin:0 0 12px}
+  .about p b,.about li b{color:var(--txt)}
+  .about ul{color:var(--dim);font-size:15px;line-height:1.8;max-width:780px;margin:0 0 12px;padding-left:20px}
+  .about li{margin:0 0 6px}
+  .formula{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;color:var(--txt);font-size:15px;line-height:1.9;max-width:780px;margin:0 0 12px}
+  .formula b{color:var(--accent)}
+  .glossary{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:840px}
+  .glossary .g{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .glossary .g h3{font-size:15px;margin:0 0 4px}
+  .glossary .g p{font-size:13px;line-height:1.7;margin:0}
+  .about .go{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  @media(max-width:720px){
+    .about h1{font-size:24px}
+    .glossary{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="/" class="logo" aria-label="BeyTop 戰鬥陀螺X 戰績網">Bey<span>Top</span><small>戰鬥陀螺X 戰績網</small></a>
+    <div class="nav-links">
+      <a href="manage.html">賽事管理</a>
+      <span class="nav-sep">｜</span>
+      <a href="/rankings/">配置排行</a>
+    </div>
+    <div class="nav-right">
+      <a class="btn yt" href="#" rel="noopener">▶ YouTube</a>
+      <a class="btn login" href="https://app.beytop.net/auth/login?next=/organizer">登入</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap about">
+  <nav class="crumbs" aria-label="麵包屑"><a href="/">首頁</a> <span>›</span> 關於 BeyTop</nav>
+
+  <h1>關於 BeyTop — 用真實對戰數據算戰鬥陀螺X勝率</h1>
+  <p class="lead">BeyTop 不靠投票、不靠感覺。每個上蓋與配置的強度，都是從真實對戰一回合一回合算出來的。</p>
+
+  <section>
+    <h2>BeyTop 是什麼</h2>
+    <p>BeyTop 是<b>戰鬥陀螺X（Beyblade X）</b>的真實對戰數據平台。我們把實際比賽的結果整理成可排序的<b>勝率梯度表（Tier List）</b>，讓你一眼看出當前環境哪個上蓋、哪套配置最強。</p>
+    <p>在 BeyTop，你可以：查<b>配置排行</b>、看<b>選手個人戰績</b>、<b>回看比賽</b>影片；如果你是主辦方，還能用我們的<b>現場報到系統</b>辦比賽。一站把「查、看、辦」都搞定。</p>
+  </section>
+
+  <section>
+    <h2>數據從哪裡來</h2>
+    <p>所有勝率都來自<b>真實對戰</b>，不是模擬，也不是網友投票。資料來源有兩種：</p>
+    <ul>
+      <li><b>YouTube 賽事影片</b>：逐場、逐回合判讀比賽過程，記錄誰用什麼配置、怎麼贏的。</li>
+      <li><b>現場賽事報到</b>：主辦方透過 BeyTop 報到系統登錄的對戰結果。</li>
+    </ul>
+    <p>因為每一場都對應得到影片來源，你可以<b>自己回看驗證</b>——數據是攤開來、可以查證的。</p>
+  </section>
+
+  <section>
+    <h2>勝率是怎麼算的</h2>
+    <p>我們算的是「回合」，不是「比賽」，這樣更貼近實際強度：</p>
+    <div class="formula">
+      <b>勝率</b>＝該配置贏的回合 ÷ 出場回合<br>
+      <b>出場率</b>＝該配置出場回合 ÷ 全部回合<br>
+      <b>平均得分</b>＝該配置總得點 ÷ 出場回合
+    </div>
+    <p>為了避免「只打過兩三場、剛好全贏」這種假高勝率，配置要累積到<b>一定場數（目前門檻為 10 場）</b>才會列入排行榜。場數不夠的還在收集中，不會誤導你。</p>
+    <p>新比賽收錄進來後會<b>重新計算</b>，所以排行反映的是當前環境，而不是過時的數據。</p>
+  </section>
+
+  <section>
+    <h2>涵蓋範圍與更新</h2>
+    <p>目前專注於<b>戰鬥陀螺X（Beyblade X）</b>，拆解到<b>上蓋、固鎖、軸心</b>三個零件層級，以及完整<b>配置</b>與<b>選手</b>維度都能各自排行。排行以<b>本月／本季</b>的最新環境為主，持續更新。</p>
+  </section>
+
+  <section>
+    <h2>名詞小辭典</h2>
+    <div class="glossary">
+      <div class="g"><h3>梯度表（Tier List）</h3><p>把陀螺依強度分級排序的表，最強的排在最上面。BeyTop 的梯度表是用真實勝率排的。</p></div>
+      <div class="g"><h3>T0／御三家</h3><p>玩家對「當前環境最強那一批」的稱呼。在 BeyTop 就是勝率排行頂端的配置。</p></div>
+      <div class="g"><h3>出場率</h3><p>一個配置有多常被使用。出場率高代表很多人在用、是環境主流。</p></div>
+      <div class="g"><h3>上蓋／固鎖／軸心</h3><p>戰鬥陀螺X 的三個主要零件。換不同組合就是不同「配置」，強度也不同。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>看更多</h2>
+    <p>想知道現在最強配置是什麼？直接看完整梯度表，或到我們的 YouTube 看比賽回看。</p>
+    <div class="go">
+      <a class="btn primary" href="/rankings/">看戰鬥陀螺X 配置排行 →</a>
+      <a class="btn yt" href="#" rel="noopener">▶ YouTube 頻道</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>Bey<span style="color:var(--accent)">Top</span> ・ 用真實對戰數據算戰鬥陀螺X勝率</div>
+    <div style="display:flex; gap:18px; flex-wrap:wrap">
+      <a href="#">YouTube 頻道</a>
+      <a href="/rankings/">戰鬥陀螺X 配置排行</a>
+      <a href="players.html">選手戰績</a>
+      <a href="events.html">比賽回看</a>
+      <a href="/about/">關於 BeyTop</a>
+    </div>
+    <div>© 2026 BeyTop</div>
+  </div>
+</footer>
+
+</body>
+</html>
