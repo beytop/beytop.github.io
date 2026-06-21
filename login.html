@@ -6,7 +6,6 @@
 <title>登入 — BeyTop</title>
 <!-- 登入已移到報到 app（app.beytop.net）。此頁退役，保留檔名只做轉址，避免舊書籤/外連 404。 -->
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=https://app.beytop.net/auth/login?next=/organizer">
 <link rel="canonical" href="https://app.beytop.net/auth/login">
 <style>
   body{margin:0;background:#0f1115;color:#8b93a3;
@@ -16,7 +15,8 @@
 </style>
 </head>
 <body>
-  <p>前往登入中…若沒有自動跳轉，請點 <a href="https://app.beytop.net/auth/login?next=/organizer">這裡</a>。</p>
-  <script>location.replace('https://app.beytop.net/auth/login?next=/organizer');</script>
+  <p>前往登入中…若沒有自動跳轉，請點 <a id="go" href="https://app.beytop.net/auth/login?next=/organizer">這裡</a>。</p>
+  <script>/* 測試站→測試後台、正式站→正式後台 */
+  var b=location.hostname.indexOf('test.')===0?'https://app-test.beytop.net':'https://app.beytop.net',u=b+'/auth/login?next=/organizer',a=document.getElementById('go');if(a)a.href=u;location.replace(u);</script>
 </body>
 </html>

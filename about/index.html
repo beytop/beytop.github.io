@@ -168,7 +168,7 @@
     <div style="display:flex; gap:18px; flex-wrap:wrap">
       <a href="#">YouTube 頻道</a>
       <a href="/rankings/">戰鬥陀螺X 配置排行</a>
-      <a href="players.html">選手戰績</a>
+      <a href="/rankings/?view=players">選手戰績</a>
       <a href="events.html">比賽回看</a>
       <a href="/about/">關於 BeyTop</a>
     </div>
@@ -176,5 +176,7 @@
   </div>
 </footer>
 
+<script>/* 測試站(test.*)：把賽事管理/登入連結指向測試後台 app-test */
+(function(){if(location.hostname.indexOf('test.')!==0)return;var b='https://app-test.beytop.net',ls=document.querySelectorAll('a[href^="https://app.beytop.net"]'),i;for(i=0;i<ls.length;i++){ls[i].href=ls[i].getAttribute('href').replace('https://app.beytop.net',b);}})();</script>
 </body>
 </html>

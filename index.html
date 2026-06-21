@@ -164,7 +164,7 @@
       <a class="card" href="/rankings/"><div class="ico">📊</div>
         <h3>戰鬥陀螺X 配置排行</h3>
         <p>看完整梯度表，還能拆成上蓋／固鎖／軸心分別比強度，找出最佳組合。</p></a>
-      <a class="card" href="players.html"><div class="ico">🧑</div>
+      <a class="card" href="/rankings/?view=players"><div class="ico">🧑</div>
         <h3>選手個人戰績</h3>
         <p>查任一選手的勝率、常用陀螺、逐場紀錄；每位選手都有自己的網址，可以分享。</p></a>
       <a class="card" href="events.html"><div class="ico">▶️</div>
@@ -199,7 +199,7 @@
     <div style="display:flex; gap:18px; flex-wrap:wrap">
       <a href="#">YouTube 頻道</a>
       <a href="/rankings/">戰鬥陀螺X 配置排行</a>
-      <a href="players.html">選手戰績</a>
+      <a href="/rankings/?view=players">選手戰績</a>
       <a href="events.html">比賽回看</a>
       <a href="/about/">關於 BeyTop</a>
     </div>
@@ -441,5 +441,7 @@
 
   render("blade");
 </script>
+<script>/* 測試站(test.*)：把賽事管理/登入連結指向測試後台 app-test */
+(function(){if(location.hostname.indexOf('test.')!==0)return;var b='https://app-test.beytop.net',ls=document.querySelectorAll('a[href^="https://app.beytop.net"]'),i;for(i=0;i<ls.length;i++){ls[i].href=ls[i].getAttribute('href').replace('https://app.beytop.net',b);}})();</script>
 </body>
 </html>

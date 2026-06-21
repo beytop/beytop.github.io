@@ -15706,7 +15706,8 @@
   "players": [
     {
       "name": "Sousuke",
-      "slug": "sousuke",
+      "id": 1042,
+      "slug": "1042-sousuke",
       "battles": 6,
       "wins": 6,
       "losses": 0,
@@ -15773,7 +15774,8 @@
     },
     {
       "name": "Balya",
-      "slug": "balya",
+      "id": 1006,
+      "slug": "1006-balya",
       "battles": 5,
       "wins": 3,
       "losses": 2,
@@ -15834,7 +15836,8 @@
     },
     {
       "name": "Berguiny",
-      "slug": "berguiny",
+      "id": 1007,
+      "slug": "1007-berguiny",
       "battles": 5,
       "wins": 3,
       "losses": 2,
@@ -15901,7 +15904,8 @@
     },
     {
       "name": "Kim Jung U",
-      "slug": "kim-jung-u",
+      "id": 1026,
+      "slug": "1026-kim-jung-u",
       "battles": 5,
       "wins": 3,
       "losses": 2,
@@ -15962,7 +15966,8 @@
     },
     {
       "name": "Leobardo",
-      "slug": "leobardo",
+      "id": 1029,
+      "slug": "1029-leobardo",
       "battles": 5,
       "wins": 5,
       "losses": 0,
@@ -16023,7 +16028,8 @@
     },
     {
       "name": "Omanju King",
-      "slug": "omanju-king",
+      "id": 1037,
+      "slug": "1037-omanju-king",
       "battles": 5,
       "wins": 4,
       "losses": 1,
@@ -16084,7 +16090,8 @@
     },
     {
       "name": "Fahreddin",
-      "slug": "fahreddin",
+      "id": 1017,
+      "slug": "1017-fahreddin",
       "battles": 4,
       "wins": 4,
       "losses": 0,
@@ -16139,7 +16146,8 @@
     },
     {
       "name": "Kyle",
-      "slug": "kyle",
+      "id": 1028,
+      "slug": "1028-kyle",
       "battles": 4,
       "wins": 3,
       "losses": 1,
@@ -16194,7 +16202,8 @@
     },
     {
       "name": "Mi Hee Youn",
-      "slug": "mi-hee-youn",
+      "id": 1033,
+      "slug": "1033-mi-hee-youn",
       "battles": 4,
       "wins": 3,
       "losses": 1,
@@ -16249,7 +16258,8 @@
     },
     {
       "name": "Min Seo Jo",
-      "slug": "min-seo-jo",
+      "id": 1034,
+      "slug": "1034-min-seo-jo",
       "battles": 4,
       "wins": 3,
       "losses": 1,
@@ -16310,7 +16320,8 @@
     },
     {
       "name": "Yoo Ha Jun",
-      "slug": "yoo-ha-jun",
+      "id": 1051,
+      "slug": "1051-yoo-ha-jun",
       "battles": 4,
       "wins": 2,
       "losses": 2,
@@ -16365,7 +16376,8 @@
     },
     {
       "name": "Zane",
-      "slug": "zane",
+      "id": 1053,
+      "slug": "1053-zane",
       "battles": 4,
       "wins": 4,
       "losses": 0,
@@ -16432,7 +16444,8 @@
     },
     {
       "name": "Adrian",
-      "slug": "adrian",
+      "id": 1002,
+      "slug": "1002-adrian",
       "battles": 3,
       "wins": 2,
       "losses": 1,
@@ -16481,7 +16494,8 @@
     },
     {
       "name": "Emmanuel Marcelino",
-      "slug": "emmanuel-marcelino",
+      "id": 1015,
+      "slug": "1015-emmanuel-marcelino",
       "battles": 3,
       "wins": 2,
       "losses": 1,
@@ -16542,7 +16556,8 @@
     },
     {
       "name": "Jarvis Law",
-      "slug": "jarvis-law",
+      "id": 1020,
+      "slug": "1020-jarvis-law",
       "battles": 3,
       "wins": 1,
       "losses": 2,
@@ -16597,7 +16612,8 @@
     },
     {
       "name": "Jerry",
-      "slug": "jerry",
+      "id": 1022,
+      "slug": "1022-jerry",
       "battles": 3,
       "wins": 2,
       "losses": 1,
@@ -16652,7 +16668,8 @@
     },
     {
       "name": "Marcelo",
-      "slug": "marcelo",
+      "id": 1030,
+      "slug": "1030-marcelo",
       "battles": 3,
       "wins": 2,
       "losses": 1,
@@ -16701,7 +16718,8 @@
     },
     {
       "name": "Mark Jules Barrientes",
-      "slug": "mark-jules-barrientes",
+      "id": 1031,
+      "slug": "1031-mark-jules-barrientes",
       "battles": 3,
       "wins": 1,
       "losses": 2,
@@ -16762,7 +16780,8 @@
     },
     {
       "name": "Minato",
-      "slug": "minato",
+      "id": 1035,
+      "slug": "1035-minato",
       "battles": 3,
       "wins": 2,
       "losses": 1,
@@ -16811,7 +16830,8 @@
     },
     {
       "name": "Tatsuki",
-      "slug": "tatsuki",
+      "id": 1045,
+      "slug": "1045-tatsuki",
       "battles": 3,
       "wins": 2,
       "losses": 1,
@@ -16866,7 +16886,8 @@
     },
     {
       "name": "13-リリナ",
-      "slug": "13-リリナ",
+      "id": 1000,
+      "slug": "1000-13-リリナ",
       "battles": 2,
       "wins": 0,
       "losses": 2,
@@ -16909,7 +16930,8 @@
     },
     {
       "name": "Akmal",
-      "slug": "akmal",
+      "id": 1004,
+      "slug": "1004-akmal",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -16952,7 +16974,8 @@
     },
     {
       "name": "Charlie",
-      "slug": "charlie",
+      "id": 1011,
+      "slug": "1011-charlie",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -16995,7 +17018,8 @@
     },
     {
       "name": "Kurigura",
-      "slug": "kurigura",
+      "id": 1027,
+      "slug": "1027-kurigura",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -17038,7 +17062,8 @@
     },
     {
       "name": "Mokky",
-      "slug": "mokky",
+      "id": 1036,
+      "slug": "1036-mokky",
       "battles": 2,
       "wins": 0,
       "losses": 2,
@@ -17081,7 +17106,8 @@
     },
     {
       "name": "Sebastian",
-      "slug": "sebastian",
+      "id": 1039,
+      "slug": "1039-sebastian",
       "battles": 2,
       "wins": 0,
       "losses": 2,
@@ -17124,7 +17150,8 @@
     },
     {
       "name": "TGしずく",
-      "slug": "tgしずく",
+      "id": 1043,
+      "slug": "1043-tgしずく",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -17167,7 +17194,8 @@
     },
     {
       "name": "Zhu Tong Yu",
-      "slug": "zhu-tong-yu",
+      "id": 1055,
+      "slug": "1055-zhu-tong-yu",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -17210,7 +17238,8 @@
     },
     {
       "name": "そら",
-      "slug": "そら",
+      "id": 1056,
+      "slug": "1056-そら",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -17253,7 +17282,8 @@
     },
     {
       "name": "ひーたん",
-      "slug": "ひーたん",
+      "id": 1058,
+      "slug": "1058-ひーたん",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -17296,7 +17326,8 @@
     },
     {
       "name": "バード",
-      "slug": "バード",
+      "id": 1059,
+      "slug": "1059-バード",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -17339,7 +17370,8 @@
     },
     {
       "name": "ユウ",
-      "slug": "ユウ",
+      "id": 1060,
+      "slug": "1060-ユウ",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -17382,7 +17414,8 @@
     },
     {
       "name": "姫",
-      "slug": "姫",
+      "id": 1061,
+      "slug": "1061-姫",
       "battles": 2,
       "wins": 1,
       "losses": 1,
@@ -17425,7 +17458,8 @@
     },
     {
       "name": "Abe",
-      "slug": "abe",
+      "id": 1001,
+      "slug": "1001-abe",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17450,7 +17484,8 @@
     },
     {
       "name": "Aiman",
-      "slug": "aiman",
+      "id": 1003,
+      "slug": "1003-aiman",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17487,7 +17522,8 @@
     },
     {
       "name": "Alvis",
-      "slug": "alvis",
+      "id": 1005,
+      "slug": "1005-alvis",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17524,7 +17560,8 @@
     },
     {
       "name": "Bleu",
-      "slug": "bleu",
+      "id": 1008,
+      "slug": "1008-bleu",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17561,7 +17598,8 @@
     },
     {
       "name": "Calvin",
-      "slug": "calvin",
+      "id": 1009,
+      "slug": "1009-calvin",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17598,7 +17636,8 @@
     },
     {
       "name": "Cannon",
-      "slug": "cannon",
+      "id": 1010,
+      "slug": "1010-cannon",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17635,7 +17674,8 @@
     },
     {
       "name": "Crimson",
-      "slug": "crimson",
+      "id": 1012,
+      "slug": "1012-crimson",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17672,7 +17712,8 @@
     },
     {
       "name": "Dubon",
-      "slug": "dubon",
+      "id": 1013,
+      "slug": "1013-dubon",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17709,7 +17750,8 @@
     },
     {
       "name": "Elena Bey",
-      "slug": "elena-bey",
+      "id": 1014,
+      "slug": "1014-elena-bey",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17746,7 +17788,8 @@
     },
     {
       "name": "Eric",
-      "slug": "eric",
+      "id": 1016,
+      "slug": "1016-eric",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17783,7 +17826,8 @@
     },
     {
       "name": "Gan Hao",
-      "slug": "gan-hao",
+      "id": 1018,
+      "slug": "1018-gan-hao",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17820,7 +17864,8 @@
     },
     {
       "name": "Hsu Jui Sheng",
-      "slug": "hsu-jui-sheng",
+      "id": 1019,
+      "slug": "1019-hsu-jui-sheng",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17857,7 +17902,8 @@
     },
     {
       "name": "Javier",
-      "slug": "javier",
+      "id": 1021,
+      "slug": "1021-javier",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17888,7 +17934,8 @@
     },
     {
       "name": "Jerry Yu",
-      "slug": "jerry-yu",
+      "id": 1023,
+      "slug": "1023-jerry-yu",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17906,7 +17953,8 @@
     },
     {
       "name": "Jimmy Lam",
-      "slug": "jimmy-lam",
+      "id": 1024,
+      "slug": "1024-jimmy-lam",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17943,7 +17991,8 @@
     },
     {
       "name": "Khaleed",
-      "slug": "khaleed",
+      "id": 1025,
+      "slug": "1025-khaleed",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -17980,7 +18029,8 @@
     },
     {
       "name": "Matt",
-      "slug": "matt",
+      "id": 1032,
+      "slug": "1032-matt",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18011,7 +18061,8 @@
     },
     {
       "name": "Por",
-      "slug": "por",
+      "id": 1038,
+      "slug": "1038-por",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18048,7 +18099,8 @@
     },
     {
       "name": "Shao Wei Yang",
-      "slug": "shao-wei-yang",
+      "id": 1040,
+      "slug": "1040-shao-wei-yang",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18079,7 +18131,8 @@
     },
     {
       "name": "Shun Da Gu",
-      "slug": "shun-da-gu",
+      "id": 1041,
+      "slug": "1041-shun-da-gu",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18116,7 +18169,8 @@
     },
     {
       "name": "Tang Jit An",
-      "slug": "tang-jit-an",
+      "id": 1044,
+      "slug": "1044-tang-jit-an",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18153,7 +18207,8 @@
     },
     {
       "name": "Taylor",
-      "slug": "taylor",
+      "id": 1046,
+      "slug": "1046-taylor",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18184,7 +18239,8 @@
     },
     {
       "name": "Thomas",
-      "slug": "thomas",
+      "id": 1047,
+      "slug": "1047-thomas",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18221,7 +18277,8 @@
     },
     {
       "name": "Vivan",
-      "slug": "vivan",
+      "id": 1048,
+      "slug": "1048-vivan",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18258,7 +18315,8 @@
     },
     {
       "name": "William",
-      "slug": "william",
+      "id": 1049,
+      "slug": "1049-william",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18295,7 +18353,8 @@
     },
     {
       "name": "Xavier",
-      "slug": "xavier",
+      "id": 1050,
+      "slug": "1050-xavier",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18332,7 +18391,8 @@
     },
     {
       "name": "Yunsin",
-      "slug": "yunsin",
+      "id": 1052,
+      "slug": "1052-yunsin",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18369,7 +18429,8 @@
     },
     {
       "name": "Zenshi",
-      "slug": "zenshi",
+      "id": 1054,
+      "slug": "1054-zenshi",
       "battles": 1,
       "wins": 0,
       "losses": 1,
@@ -18406,7 +18467,8 @@
     },
     {
       "name": "たこいと",
-      "slug": "たこいと",
+      "id": 1057,
+      "slug": "1057-たこいと",
       "battles": 1,
       "wins": 0,
       "losses": 1,

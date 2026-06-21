@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/">
+
+<!-- ===== SEO（依 文件/rankings.md、SEO研究.md）===== -->
+<!--PLAYER_META:START-->
+<title>Yunsin 的戰績與常用配置｜BeyTop 戰鬥陀螺X</title>
+<meta name="description" content="Yunsin：出賽 1 場、0 勝 1 敗，勝率 0%。看常用配置與每一場逐回合對戰紀錄。">
+<link rel="canonical" href="https://beytop.net/player/1052-yunsin/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="BeyTop">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="Yunsin｜BeyTop 戰鬥陀螺X 戰績">
+<meta property="og:description" content="Yunsin：出賽 1 場、0 勝 1 敗，勝率 0%。看常用配置與每一場逐回合對戰紀錄。">
+<meta property="og:url" content="https://beytop.net/player/1052-yunsin/">
+<meta property="og:image" content="https://beytop.net/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<!--PLAYER_META:END-->
+
+<!-- 結構化資料：麵包屑（會顯示 rich result）-->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"首頁","item":"https://beytop.net/"},
+    {"@type":"ListItem","position":2,"name":"配置排行","item":"https://beytop.net/rankings/"}
+  ]
+}
+</script>
+<!-- 結構化資料：FAQ（餵 AI／語意，非 SERP rich result；FAQ rich result 已於 2026/5 全面停用）-->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"戰鬥陀螺X 現在最強配置是什麼？","acceptedAnswer":{"@type":"Answer","text":"依 BeyTop 真實對戰勝率，當前環境最強配置會即時反映在本頁排行榜頂端；可切換上蓋／固鎖／軸心維度，或依勝率、出場率排序查看。"}},
+    {"@type":"Question","name":"BeyTop 的勝率是怎麼算的？","acceptedAnswer":{"@type":"Answer","text":"勝率＝該配置贏的回合數 ÷ 出場回合數，全部取自真實對戰的逐回合紀錄，不是憑感覺排名。"}},
+    {"@type":"Question","name":"排行榜多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"持續收錄新賽事影片後重算，數據隨之更新；每筆配置都可展開查看對位戰績與影片來源。"}}
+  ]
+}
+</script>
+<!-- 結構化資料：ItemList（最強配置，由 build_ranking.py 建置時產出）-->
+<!--SEO_ITEMLIST:START-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"戰鬥陀螺X 最強上蓋排行","itemListElement":[{"@type":"ListItem","position":1,"name":"戰神爆擊W"},{"@type":"ListItem","position":2,"name":"飛龍懸浮"},{"@type":"ListItem","position":3,"name":"魔導神杖"},{"@type":"ListItem","position":4,"name":"霜輝銀狼"},{"@type":"ListItem","position":5,"name":"鈷藍青龍"},{"@type":"ListItem","position":6,"name":"鮫鯊狂鱗"},{"@type":"ListItem","position":7,"name":"鳳凰飛翼"},{"@type":"ListItem","position":8,"name":"空力天馬(藍)"},{"@type":"ListItem","position":9,"name":"塑膠紋章爆擊W"},{"@type":"ListItem","position":10,"name":"蒼龍爆刃"}]}
+</script>
+<!--SEO_ITEMLIST:END-->
+
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  /* 排行榜專屬樣式（共用樣式在 assets/site.css）。以下覆寫規則放在 link 之後才會生效 */
+  nav + .wrap{padding-top:16px}                                         /* 內容區在 nav 之後留白（不影響 nav 自身的 .wrap）*/
+  #tbl thead th{position:sticky;top:0;z-index:1}                        /* 長表表頭固定（共用 thead th 不 sticky；nav z-index:10 在其上）*/
+  .wr{font-weight:700}                                                  /* 選手列 span.wr 仍粗體（共用只有 td.wr）*/
+  table.mini th .ar.on, .pchead .ar.on{opacity:1;color:var(--accent)}  /* mini／選手面板排序箭頭高亮 */
+  .plink{color:inherit;text-decoration:none}                           /* 選手名連結：平時同內文色，hover 才提示可點 */
+  .plink:hover{color:var(--accent);text-decoration:underline}
+  /* 選手個人頁（profile mode）：隱藏排行控制項／表頭，只突出單一選手 */
+  body.profile-mode .langbar, body.profile-mode #tbl thead,
+  body.profile-mode .faq, body.profile-mode #note,
+  body.profile-mode .headr .search{display:none}
+  .phdr{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;padding:4px 0 16px}
+  .phdr .pname{flex:0 0 100%;text-align:left;font-size:38px;font-weight:800;line-height:1.15;margin-bottom:6px}
+  .phdr .pwr{font-size:30px;font-weight:800;line-height:1}
+  .phdr .pstat{font-weight:700}
+  .phdr .pmeta{color:var(--dim)}
+
+  /* —— 頁面頂部：標題＋搜尋＋語言/檢視 —— */
+  h1{font-size:20px;margin:0 0 4px}
+  .head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+  .headr{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+  .stats{color:var(--dim);font-size:13px;white-space:nowrap}
+  .search{display:flex;gap:6px;align-items:center}
+  .search select,.search input{background:var(--panel);color:var(--txt);border:1px solid var(--line);
+       border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit}
+  .search input{width:190px}
+  .search select{cursor:pointer}
+  .search input:focus,.search select:focus{outline:none;border-color:var(--accent)}
+  .langbar{margin:0 0 14px;display:flex;gap:8px}
+  .langbar select{background:var(--panel);color:var(--txt);border:1px solid var(--line);
+       border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;cursor:pointer}
+  .langbar select:focus{outline:none;border-color:var(--accent)}
+  .meta{color:var(--dim);font-size:12px;margin-bottom:16px;line-height:1.6}
+  .note{color:#d9a441}
+
+  /* —— SEO：麵包屑／lead／靜態最強榜／FAQ —— */
+  .crumbs{color:var(--dim);font-size:12px;margin:0 0 10px}
+  .crumbs a{color:var(--dim)}
+  .crumbs a:hover{color:var(--accent)}
+  .nav-right .navlang{background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:13px;font-family:inherit;cursor:pointer}
+  .nav-right .navlang:focus{outline:none;border-color:var(--accent)}
+  .faq{margin:36px auto 8px}
+  .faq h2{font-size:20px;margin:0 0 14px}
+  .faq-item{margin:0 0 14px}
+  .faq-item h3{font-size:15px;margin:0 0 4px}
+  .faq-item p{color:var(--dim);font-size:13px;line-height:1.7;margin:0}
+
+  /* —— 展開明細 —— */
+  tr.main .combo .blade::after{content:"▶";font-size:.7em;color:var(--dim);margin-left:6px;display:inline-block;transition:transform .15s}
+  tr.main.open .combo .blade::after{transform:rotate(90deg)}
+  tr.detail.hidden{display:none}
+  tr.detail > td{background:#10131a;padding:10px 10px}
+  .detailwrap{display:flex;flex-wrap:wrap;gap:18px}
+  .dcol{flex:1 1 200px;min-width:180px}
+  .dcol.wide{flex:1 1 100%}   /* 對位戰績獨占整列，避免最右「影片來源」欄被切掉 */
+  .dh{font-size:12px;color:var(--dim);font-weight:700;margin-bottom:8px;border-bottom:1px solid var(--line);padding-bottom:4px}
+  table.mini{width:100%;border:none;background:transparent;font-size:13px}
+  table.mini th{position:static;background:transparent;text-align:right;color:var(--dim);font-weight:600;padding:3px 6px;border:none;cursor:default;font-size:12px}
+  table.mini th.l,table.mini td.l{text-align:left}
+  table.mini th.mu,table.mini th.sm{cursor:pointer}
+  table.mini th.mu:hover,table.mini th.sm:hover{color:var(--txt)}
+  table.mini th .ar{opacity:.6;font-size:9px;margin-left:2px}
+  table.mini td{text-align:right;padding:3px 6px;border:none;white-space:nowrap}
+  .showmore{cursor:pointer;color:var(--accent);font-weight:700;user-select:none;padding:8px 4px;text-align:center}
+  .showmore:hover{text-decoration:underline}
+  .morewrap.hidden{display:none}
+  tr.more.hidden{display:none}
+  .frow{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:13px}
+  .flbl{width:68px;color:var(--dim)}
+  .fbar{flex:1;height:8px;border-radius:4px;background:#2a2f3a;overflow:hidden}
+  .fbar > i{display:block;height:100%}
+  .fval{width:78px;text-align:right;font-variant-numeric:tabular-nums}
+  .kv{margin:4px 0;font-size:13px}
+  table.mini td.opp{cursor:pointer;color:var(--accent)}
+  table.mini td.opp::after{content:" ❐";font-weight:400}
+  table.mini td.opp:hover{color:var(--accent);text-decoration:underline}
+  .oppcombo{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;padding:10px 4px}
+  .opppart{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+  .opppart .pics{flex-wrap:wrap;justify-content:center;max-width:200px}
+  .opppart .pic{width:110px;height:110px}            /* 彈窗內放大（共用為 80px）*/
+  .opppart .pic.multi{width:92px;height:92px}        /* CX 多圖放大（共用為 64px）、維持原換行位置 */
+  .opppart .nm{align-items:center}
+  .opppart .blade{font-size:15px}
+  .opppart .sub{font-size:12px;margin-top:2px}
+
+  /* —— 選手戰績（OP.GG 式）／常用陀螺 —— */
+  .bhrow{border-bottom:1px solid var(--line)}
+  .bhrow:last-child{border-bottom:none}
+  .bhmain{display:flex;align-items:center;gap:12px;padding:8px 2px;cursor:pointer;flex-wrap:wrap}
+  .bhmain:hover{color:#fff}
+  .bhmain .bhopp::after{content:"▶";font-size:.7em;color:var(--dim);margin-left:6px;display:inline-block;transition:transform .15s}
+  .bhmain.open .bhopp::after{transform:rotate(90deg)}
+  .bhopp{font-weight:600;min-width:130px}
+  .bhres{font-variant-numeric:tabular-nums}
+  .bhevt{flex:1;font-size:12px}
+  a.replay{color:var(--yt);text-decoration:none;font-weight:700;white-space:nowrap}   /* YT 回放：與站上「紅＝影片」一致 */
+  a.replay:hover{text-decoration:underline}
+  .bhrounds{padding:2px 0 10px}
+  .bhrounds.hidden{display:none}
+  .pchead,.pcmain{display:flex;align-items:center;gap:10px}
+  .pchead{padding:4px 6px;color:var(--dim);font-size:12px;border-bottom:1px solid var(--line)}
+  .pcmain{padding:8px 6px;cursor:pointer;border-bottom:1px solid var(--line)}
+  .pcmain:hover{background:#1d2230}
+  .pccfg{flex:1;min-width:0}
+  .pcnum{width:80px;text-align:right;font-variant-numeric:tabular-nums;flex:0 0 auto}
+  .pcsrc{width:132px;text-align:right;flex:0 0 auto}
+  .pcmain .blade::after{content:"▶";font-size:.7em;color:var(--dim);margin-left:6px;display:inline-block;transition:transform .15s}
+  .pcmain.open .blade::after{transform:rotate(90deg)}
+  .pcdetail{padding:6px 6px 14px}
+  .pcdetail.hidden{display:none}
+  .pchead .pccfg{text-align:left}
+  .pcsort{cursor:pointer;user-select:none}
+  .pcsort:hover{color:var(--txt)}
+  .pchead .ar{opacity:.6;font-size:9px;margin-left:2px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="/" class="logo" aria-label="BeyTop 戰鬥陀螺X 戰績網">Bey<span>Top</span><small>戰鬥陀螺X 戰績網</small></a>
+    <div class="nav-links">
+      <a href="manage.html">賽事管理</a>
+      <span class="nav-sep">｜</span>
+      <a href="/rankings/">配置排行</a>
+    </div>
+    <div class="nav-right">
+      <a class="btn yt" href="#" rel="noopener">▶ YouTube</a>
+      <select id="lang" class="navlang" aria-label="語言／Language">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+      </select>
+      <a class="btn login" href="https://app.beytop.net/auth/login?next=/organizer">登入</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <nav class="crumbs" aria-label="麵包屑"><a href="/">首頁</a> <span>›</span> 配置排行</nav>
+  <div class="head">
+    <h1 id="title">戰鬥陀螺X 配置排行榜</h1>
+    <div class="headr">
+      <div id="stats" class="stats"></div>
+      <div class="search">
+        <input id="sbox" type="search" placeholder="搜尋（上蓋／固鎖／軸心）" autocomplete="off">
+      </div>
+    </div>
+  </div>
+
+  <div class="langbar">
+    <select id="view">
+      <option value="full">完整陀螺</option>
+      <option value="blade">上蓋</option>
+      <option value="ratchet">固鎖</option>
+      <option value="bit">軸心</option>
+      <option value="players">選手</option>
+    </select>
+  </div>
+  <div class="meta note" id="err"></div>
+  <table id="tbl">
+    <thead>
+      <tr>
+        <th class="l" data-k="rank"><span class="hl">#</span></th>
+        <th class="l" data-k="combo"><span class="hl">配置（上蓋 / 固鎖 / 軸心）</span></th>
+        <th data-k="winrate"><span class="hl">勝率</span><span class="ar"></span></th>
+        <th data-k="pickrate"><span class="hl">出場率</span><span class="ar"></span></th>
+        <th data-k="avg_points"><span class="hl">平均得分</span><span class="ar"></span></th>
+        <th data-k="appearances"><span class="hl">場數</span><span class="ar"></span></th>
+        <th class="src" data-k="src"><span class="hl">影片來源</span></th>
+      </tr>
+    </thead>
+    <tbody id="rows"><!--SEO_ROWS:START--><tr><td colspan="7"><strong>Yunsin</strong> — 勝率 0%（0勝1敗），出賽 1 場</td></tr><tr><td colspan="7">常用配置：鮫鯊狂鱗 1-70 R、魔導神杖 1-60 L、鳳凰飛翼 7-60 K</td></tr><!--SEO_ROWS:END--></tbody>
+  </table>
+  <div class="meta" id="note" style="margin-top:14px">
+    勝率＝該配置贏的回合 ÷ 出場回合；出場率＝出場回合 ÷ 全部回合；平均得分＝總得點 ÷ 出場回合。<br>
+    點任一列可展開明細（每回合勝率/出場率、得分方式、勝負、對位戰績、影片來源）。
+  </div>
+</div>
+
+<section class="wrap faq">
+  <h2>戰鬥陀螺X 配置排行 常見問題</h2>
+  <div class="faq-item">
+    <h3>戰鬥陀螺X 現在最強配置是什麼？</h3>
+    <p>依 BeyTop 真實對戰勝率，當前環境最強配置會即時反映在本頁排行榜頂端；可切換上蓋／固鎖／軸心維度，或依勝率、出場率排序查看。</p>
+  </div>
+  <div class="faq-item">
+    <h3>BeyTop 的勝率是怎麼算的？</h3>
+    <p>勝率＝該配置贏的回合數 ÷ 出場回合數，全部取自真實對戰的逐回合紀錄，不是憑感覺排名。</p>
+  </div>
+  <div class="faq-item">
+    <h3>排行榜多久更新一次？</h3>
+    <p>持續收錄新賽事影片後重算，數據隨之更新；每筆配置都可展開查看對位戰績與影片來源。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>Bey<span style="color:var(--accent)">Top</span> ・ 用真實對戰數據算戰鬥陀螺X勝率</div>
+    <div style="display:flex; gap:18px; flex-wrap:wrap">
+      <a href="#">YouTube 頻道</a>
+      <a href="/rankings/">戰鬥陀螺X 配置排行</a>
+      <a href="/rankings/?view=players">選手戰績</a>
+      <a href="events.html">比賽回看</a>
+      <a href="/about/">關於 BeyTop</a>
+    </div>
+    <div>© 2026 BeyTop</div>
+  </div>
+</footer>
+
+<div id="modal" class="modal hidden">
+  <div class="mbox">
+    <div class="mhead"><span id="mtitle">影片來源</span><button id="mclose" type="button">✕</button></div>
+    <div id="mbody" class="mbody"></div>
+  </div>
+</div>
+
+<script>window.PROFILE_SLUG="1052-yunsin";</script>
+<script src="data/ranking.js"></script>
+<script>
+(function(){
+  var D = window.RANKING;
+  if(!D){ document.getElementById('err').textContent = t('err'); return; }
+
+  var rowsEl = document.getElementById('rows');
+  var thead = document.querySelector('#tbl thead');
+  var sortKey = 'pickrate', sortDir = -1;   // 預設：出場率高到低
+  var currentArr = [];                       // 目前排序後的清單（給展開/彈窗索引）
+  var searchText = '';                       // 搜尋關鍵字（單框，跨上蓋/固鎖/軸心自動比對）
+  var lang = 'zh';                           // 介面與名稱語言（zh/en/ja），預設中文
+  var view = 'full';                         // 彙總模式：full 完整 / blade 上蓋 / ratchet 固鎖 / bit 軸心
+  var MIN_N = 5;                             // 最低場數門檻：場數 < MIN_N 的配置不列入（小樣本勝率沒參考價值）；選手視圖不套用
+
+  // ---- 多語介面字典 ----
+  var I18N = {
+    zh: {
+      title:'戰鬥陀螺X 配置排行榜',
+      stats:'本站資料共 {n} 回合',
+      col_combo:'配置（上蓋 / 固鎖 / 軸心）', col_wr:'勝率', col_pr:'出場率', col_ap:'平均得分', col_n:'場數',
+      mode_blade:'上蓋', mode_ratchet:'固鎖', mode_bit:'軸心',
+      view_full:'完整陀螺', view_blade:'上蓋', view_ratchet:'固鎖', view_bit:'軸心',
+      ph_combo:'搜尋（上蓋／固鎖／軸心）', ph_blade:'搜尋上蓋', ph_ratchet:'搜尋固鎖', ph_bit:'搜尋軸心',
+      d_perround:'每回合', d_round:'回合', d_plays:'出場', d_wr:'勝率', d_share:'出場佔比', d_career:'生涯紀錄', d_sum:'合計',
+      d_finish:'得分方式', d_wl:'勝負樣本', d_win:'勝', d_loss:'負', d_avg:'平均得分',
+      fin:{Spin:'轉停', Over:'擊飛', Burst:'爆裂', Xtreme:'極限'},
+      src:'影片來源', d_match:'對位戰績', d_opp:'對手配置', d_faced:'遭遇',
+      s_by:'各搭配明細', s_rb:'固鎖 · 軸心', s_n:'場次', s_combos:'種搭配',
+      m_nodata:'無資料',
+      view_players:'選手', col_player:'選手', col_record:'戰績', rec_w:'勝', rec_l:'敗',
+      col_wr_battle:'整場勝率', col_rounds:'出戰回合', col_wr_round:'回合勝率', col_avg_round:'回合平均得分', show_more:'顯示更多', show_less:'收合',
+      ph_player:'搜尋選手名', d_topbeys:'常用陀螺', d_record:'戰績', d_replay:'回放', d_mine:'本人', d_result:'勝負', p_vs:'vs',
+      pnote1:'勝率＝整場 3on3 的勝場 ÷ 出場場數；戰績＝勝場-敗場；展開選手可看生涯逐回合紀錄與得分方式。',
+      pnote2:'點選手展開常用陀螺、每回合表現、得分方式與戰績；點任一場可展開逐回合並開 YouTube 回放。',
+      note1:'勝率＝該配置贏的回合 ÷ 出場回合；出場率＝出場回合 ÷ 全部回合；平均得分＝總得點 ÷ 出場回合。',
+      note2:'點任一列可展開明細（每回合勝率/出場率、得分方式、勝負、對位戰績、影片來源）。',
+      err:'找不到 data/ranking.js，請先執行「排行榜更新.bat」產生資料。'
+    },
+    en: {
+      title:'Beyblade X Combo Tier List',
+      stats:'Total rounds on site: {n}',
+      col_combo:'Combo (Blade / Ratchet / Bit)', col_wr:'Win Rate', col_pr:'Pick Rate', col_ap:'Avg Points', col_n:'Rounds',
+      mode_blade:'Blade', mode_ratchet:'Ratchet', mode_bit:'Bit',
+      view_full:'Full', view_blade:'By Blade', view_ratchet:'By Ratchet', view_bit:'By Bit',
+      ph_combo:'Search (blade / ratchet / bit)', ph_blade:'Search blade', ph_ratchet:'Search ratchet', ph_bit:'Search bit',
+      d_perround:'Per Round', d_round:'Round', d_plays:'Plays', d_wr:'Win Rate', d_share:'Share', d_career:'Career', d_sum:'Total',
+      d_finish:'Finish Types', d_wl:'W / L Sample', d_win:'Win', d_loss:'Loss', d_avg:'Avg',
+      fin:{Spin:'Spin', Over:'Over', Burst:'Burst', Xtreme:'Xtreme'},
+      src:'Video Sources', d_match:'Matchups (who beats who)', d_opp:'Opponent', d_faced:'Faced',
+      s_by:'Combinations', s_rb:'Ratchet · Bit', s_n:'Rounds', s_combos:'combos',
+      m_nodata:'No data',
+      view_players:'Players', col_player:'Player', col_record:'Record', rec_w:'W', rec_l:'L',
+      col_wr_battle:'Match WR', col_rounds:'Rounds', col_wr_round:'Round WR', col_avg_round:'Pts/Round', show_more:'Show more', show_less:'Show less',
+      ph_player:'Search player', d_topbeys:'Top Beys', d_record:'Match History', d_replay:'Replay', d_mine:'Player', d_result:'Result', p_vs:'vs',
+      pnote1:'Win Rate = battles won ÷ battles played; Record = wins-losses; expand a player for career per-round stats and finish types.',
+      pnote2:'Click a player for top beys, per-round, finishes and history; click a battle to expand rounds with a YouTube replay.',
+      note1:'Win Rate = rounds won ÷ rounds played; Pick Rate = rounds played ÷ all rounds; Avg Points = total points ÷ rounds played.',
+      note2:'Click any row to expand details (per-round win/pick rate, finish types, W/L, matchups, video sources).',
+      err:'data/ranking.js not found. Run "排行榜更新.bat" to generate data first.'
+    },
+    ja: {
+      title:'ベイブレードX 組み合わせティア表',
+      stats:'収録データ：全 {n} ラウンド',
+      col_combo:'組み合わせ（ブレード / ラチェット / ビット）', col_wr:'勝率', col_pr:'出場率', col_ap:'平均得点', col_n:'出場数',
+      mode_blade:'ブレード', mode_ratchet:'ラチェット', mode_bit:'ビット',
+      view_full:'詳細', view_blade:'ブレード', view_ratchet:'ラチェット', view_bit:'ビット',
+      ph_combo:'検索（ブレード／ラチェット／ビット）', ph_blade:'ブレードで検索', ph_ratchet:'ラチェットで検索', ph_bit:'ビットで検索',
+      d_perround:'各ラウンド', d_round:'ラウンド', d_plays:'出場', d_wr:'勝率', d_share:'出場比', d_career:'通算', d_sum:'合計',
+      d_finish:'決着方法', d_wl:'勝敗サンプル', d_win:'勝', d_loss:'敗', d_avg:'平均得点',
+      fin:{Spin:'スピン', Over:'オーバー', Burst:'バースト', Xtreme:'エクストリーム'},
+      src:'映像出典', d_match:'対戦成績（相性）', d_opp:'相手の組み合わせ', d_faced:'遭遇',
+      s_by:'組み合わせ別', s_rb:'ラチェット · ビット', s_n:'出場数', s_combos:'種',
+      m_nodata:'データなし',
+      view_players:'選手', col_player:'選手', col_record:'戦績', rec_w:'勝', rec_l:'敗',
+      col_wr_battle:'試合勝率', col_rounds:'出場ラウンド', col_wr_round:'ラウンド勝率', col_avg_round:'ラウンド平均得点', show_more:'もっと見る', show_less:'折りたたむ',
+      ph_player:'選手名で検索', d_topbeys:'よく使うベイ', d_record:'戦績', d_replay:'リプレイ', d_mine:'本人', d_result:'勝敗', p_vs:'vs',
+      pnote1:'勝率＝3on3 試合の勝利 ÷ 出場試合；戦績＝勝-敗；選手を展開すると通算ラウンド別記録と決着方法を表示。',
+      pnote2:'選手をクリックでよく使うベイ・ラウンド別・決着方法・戦績を表示；試合をクリックでラウンド展開＋YouTube リプレイ。',
+      note1:'勝率＝勝ったラウンド ÷ 出場ラウンド；出場率＝出場ラウンド ÷ 全ラウンド；平均得点＝総得点 ÷ 出場ラウンド。',
+      note2:'任意の行をクリックで詳細表示（ラウンド別勝率/出場率、決着方法、勝敗、対戦成績、映像出典）。',
+      err:'data/ranking.js が見つかりません。先に「排行榜更新.bat」を実行してください。'
+    }
+  };
+  function t(k){ return (I18N[lang] || I18N.zh)[k]; }
+  function finName(k){ return ((I18N[lang] || I18N.zh).fin || {})[k] || k; }
+  function paren(n){ return lang==='en' ? ' ('+n+')' : '（'+n+'）'; }
+  function srcCount(n){ return lang==='en' ? ' ('+n+')' : (lang==='ja' ? '（'+n+'件）' : '（'+n+' 場）'); }
+  // 來源連結清單：顯示影片真正的 YouTube 標題（無賽事標籤、不顯示「誰使用」）
+  function sourcesLinks(src){
+    src = src || [];
+    if(!src.length) return '<div class="dim">'+t('m_nodata')+'</div>';
+    var cnt = {};   // 同名標題（長直播分段）出現次數，用來決定要不要附對戰名區分
+    src.forEach(function(s){ var k=s.video_title||''; if(k) cnt[k]=(cnt[k]||0)+1; });
+    return src.map(function(s){
+      var name = s.video_title || s.title || '';
+      if(s.video_title && cnt[s.video_title] > 1 && s.title) name += '（'+s.title+'）';
+      return '<a href="'+encodeURI(s.url)+'" target="_blank" rel="noopener">'+esc(name)+'</a>';
+    }).join('');
+  }
+
+  function pct(x){ return (x*100).toFixed(1) + '%'; }
+  function wrColor(w){ return w>=0.6 ? 'var(--good)' : (w<=0.4 ? 'var(--bad)' : 'var(--mid)'); }
+
+  function pic(c){
+    var arr = c.blade_imgs || [];
+    if(arr.length){
+      var cls = arr.length>1 ? 'pic multi' : 'pic';
+      var dim = arr.length>1 ? 64 : 80;
+      var imgs = arr.map(function(src){
+        return '<img class="'+cls+'" src="'+src+'" loading="lazy" width="'+dim+'" height="'+dim+'" alt="" onerror="this.style.display=\'none\'">';
+      }).join('');
+      return '<span class="pics">'+imgs+'</span>';
+    }
+    return '<div class="ph">'+initials(c.blade)+'</div>';
+  }
+  function initials(s){
+    s = (s||'').trim();
+    var m = s.match(/[A-Za-z]+/g);
+    if(m) return (m[0][0] + (m[1]?m[1][0]:'')).toUpperCase();
+    return s.slice(0,2);
+  }
+
+  function esc(s){ return (s==null?'':String(s)).replace(/[&<>"]/g,function(m){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]; }); }
+
+  // 固鎖/軸心彙總：用 phstudy 零件圖（data/images_parts/{type}/{code}.png；缺圖自動退回代號徽章）
+  function partPic(type, code){
+    return '<span class="pics">'
+      +'<img class="pic" src="data/images_parts/'+type+'/'+encodeURIComponent(code)+'.png" loading="lazy" width="80" height="80" alt="" '
+        +'onerror="this.style.display=\'none\';this.parentNode.querySelector(\'.ph\').style.display=\'flex\'">'
+      +'<div class="ph code" style="display:none">'+esc(code)+'</div>'
+      +'</span>';
+  }
+
+  // 依目前語言取上蓋名稱（中/日缺名時退回英文）
+  function bladeName(c){
+    var en = c.blade_label || c.blade;
+    if(lang==='zh') return c.blade_zh || en;
+    if(lang==='ja') return c.blade_ja || en;
+    return en;
+  }
+
+  // 對手配置字串為「上蓋 固鎖 軸心」，反解上蓋並依語言翻名（固鎖／軸心代號維持原樣）
+  var oppMap = {};        // 上蓋名 -> combo（給翻名用）
+  var comboByKey = {};    // 完整配置字串 -> combo（給對手彈窗查圖片用）
+  D.combos.forEach(function(c){ oppMap[c.blade] = c; comboByKey[c.combo] = c; });
+  function oppName(opp){
+    var p = (opp||'').split(' ');
+    if(p.length < 3) return opp;
+    var bit = p.pop(), rat = p.pop(), blade = p.join(' ');
+    var info = oppMap[blade];
+    return info ? bladeName(info)+' '+rat+' '+bit : opp;
+  }
+
+  // ---- 明細面板 ----
+  var FIN = ['Spin','Over','Burst','Xtreme'];
+  var FINC = {Spin:'#7f8aa3', Over:'#4d8dff', Burst:'#ffb04d', Xtreme:'#c061ff'};
+
+  function roundsTable(c, hideShare){
+    var rs = Object.keys(c.rounds||{}).map(Number).sort(function(a,b){return a-b;});
+    if(!rs.length) return '<div class="dim">—</div>';
+    var body = rs.map(function(r){
+      var ap=c.rounds[r]||0, w=(c.round_wins&&c.round_wins[r])||0;
+      var wr=ap?w/ap:0;
+      var share = hideShare ? '' : '<td>'+pct(c.appearances?ap/c.appearances:0)+'</td>';
+      return '<tr><td class="l">R'+r+'</td><td>'+ap+'</td>'
+        +'<td style="color:'+wrColor(wr)+'">'+pct(wr)+'</td>'+share+'</tr>';
+    }).join('');
+    var shareTh = hideShare ? '' : '<th>'+t('d_share')+'</th>';
+    return '<table class="mini"><tr><th class="l">'+t('d_round')+'</th><th>'+t('d_plays')+'</th><th>'+t('d_wr')+'</th>'+shareTh+'</tr>'+body+'</table>';
+  }
+  function finishBlock(c){
+    var f=c.finishes||{}, tot=FIN.reduce(function(s,k){return s+(f[k]||0);},0);
+    return FIN.map(function(k){
+      var n=f[k]||0, p=tot?n/tot:0;
+      return '<div class="frow"><span class="flbl">'+esc(finName(k))+'</span>'
+        +'<span class="fbar"><i style="width:'+(p*100)+'%;background:'+FINC[k]+'"></i></span>'
+        +'<span class="fval">'+n+'（'+pct(p)+'）</span></div>';
+    }).join('');
+  }
+  function matchupTable(ms, sortk, dir){
+    var arr = ms.slice().sort(function(a,b){
+      var x=a[sortk], y=b[sortk];
+      if(typeof x==='string'){ x=x.toLowerCase(); y=y.toLowerCase(); }
+      if(x<y) return -dir; if(x>y) return dir;
+      return b.n - a.n;
+    });
+    function th(k,label,cls){
+      var on = (sortk===k);
+      var ar = on ? (dir<0?'▼':'▲') : '◀';
+      return '<th class="mu '+(cls||'')+'" data-mk="'+k+'">'+label+'<span class="ar'+(on?' on':'')+'">'+ar+'</span></th>';
+    }
+    var body=arr.map(function(m, idx){
+      var ns=(m.sources||[]).length;
+      var src = ns ? '<span class="srctoggle" data-opp="'+esc(m.opp)+'">'+t('src')+paren(ns)+'</span>'
+                   : '<span class="dim">—</span>';
+      var cls = idx>=5 ? ' class="more hidden"' : '';
+      return '<tr'+cls+'><td class="l opp" data-opp="'+esc(m.opp)+'">'+esc(oppName(m.opp))+'</td><td>'+m.n+'</td>'
+        +'<td style="color:'+wrColor(m.winrate)+'">'+pct(m.winrate)+'</td>'
+        +'<td>'+src+'</td></tr>';
+    }).join('');
+    // 預設前 5 列，其餘收起，附「顯示更多」列（取代原本的表內滾輪）
+    var moreRow = arr.length>5
+      ? '<tr class="showmore-row"><td colspan="4" class="showmore" data-more="'+(arr.length-5)+'">'+t('show_more')+'（'+(arr.length-5)+'）▼</td></tr>'
+      : '';
+    return '<table class="mini"><tr>'
+      +th('opp',t('d_opp'),'l')+th('n',t('d_faced'))+th('winrate',t('d_wr'))+'<th>'+t('src')+'</th>'
+      +'</tr>'+body+moreRow+'</table>';
+  }
+  // 對位戰績排除「同一配置打自己」（鏡像對戰）
+  function oppMatchups(c){
+    return (c.matchups||[]).filter(function(m){ return m.opp !== c.combo; });
+  }
+  // pi 有值時（嵌在選手面板裡）用 data-pi+data-combo 反查該選手的個人配置物件，否則用主表索引 data-i
+  function matchupBlock(c,i,key,pi){
+    var ms=oppMatchups(c);
+    if(!ms.length) return '<div class="dim">—</div>';
+    var ref = (pi!==undefined && pi!==null) ? 'data-pi="'+pi+'" data-combo="'+esc(key)+'"' : 'data-i="'+i+'"';
+    return '<div class="muwrap" '+ref+' data-mk="n" data-dir="-1">'+matchupTable(ms,'n',-1)+'</div>';
+  }
+  function detailHTML(c,i,key,pi){
+    var losses=c.appearances-c.wins;
+    return '<div class="detailwrap">'
+      +'<div class="dcol"><div class="dh">'+t('d_perround')+'</div>'+roundsTable(c, pi!=null)+'</div>'
+      +'<div class="dcol"><div class="dh">'+t('d_finish')+'</div>'+finishBlock(c)+'</div>'
+      +'<div class="dcol"><div class="dh">'+t('d_wl')+'</div>'
+        +'<div class="kv">'+t('d_win')+' <b style="color:var(--good)">'+c.wins+'</b>　'+t('d_loss')+' <b style="color:var(--bad)">'+losses+'</b></div>'
+      +'</div>'
+      +'<div class="dcol wide"><div class="dh">'+t('d_match')+'</div>'+matchupBlock(c,i,key,pi)+'</div>'
+    +'</div>';
+  }
+
+  // ---- 彙總模式：依上蓋/固鎖/軸心(dim) 把所有搭配的數據合併 ----
+  var _aggCache = {};
+  function aggByDim(dim){
+    if(_aggCache[dim]) return _aggCache[dim];
+    var total = D.total_appearances || D.combos.reduce(function(s,c){ return s+c.appearances; }, 0);
+    var map = {};
+    D.combos.forEach(function(c){
+      var key = c[dim];
+      var g = map[key];
+      if(!g){
+        g = map[key] = { dim:dim, key:key, appearances:0, wins:0, points:0, combos:[], _src:{} };
+        if(dim==='blade'){   // 上蓋彙總沿用顯示欄位與圖片
+          g.blade=c.blade; g.blade_label=c.blade_label; g.blade_zh=c.blade_zh;
+          g.blade_ja=c.blade_ja; g.system=c.system; g.blade_imgs=c.blade_imgs;
+        }
+      }
+      g.appearances += c.appearances;
+      g.wins += c.wins;
+      g.points += (c.points || 0);
+      g.combos.push(c);
+      // 彙整該項目底下各配置的影片來源（以 url 去重，同選手頁 _src 慣用法）
+      (c.sources||[]).forEach(function(s){ if(s.url && !g._src[s.url]) g._src[s.url]=s; });
+    });
+    _aggCache[dim] = Object.keys(map).map(function(k){
+      var g = map[k];
+      g.winrate    = g.appearances ? g.wins/g.appearances : 0;
+      g.pickrate   = total ? g.appearances/total : 0;
+      g.avg_points = g.appearances ? g.points/g.appearances : 0;
+      g.sources    = Object.keys(g._src).map(function(u){ return g._src[u]; });
+      delete g._src;
+      return g;
+    });
+    return _aggCache[dim];
+  }
+  // 彙總展開時，每列要顯示「另外兩個維度」的搭配
+  function pairLabel(dim){
+    if(dim==='ratchet') return t('mode_blade')+' · '+t('mode_bit');
+    if(dim==='bit')     return t('mode_blade')+' · '+t('mode_ratchet');
+    return t('mode_ratchet')+' · '+t('mode_bit');   // dim==='blade'
+  }
+  function pairText(c, dim){
+    if(dim==='ratchet') return bladeName(c)+' · '+(c.bit||'—');
+    if(dim==='bit')     return bladeName(c)+' · '+(c.ratchet||'—');
+    return (c.ratchet||'—')+' · '+(c.bit||'—');      // dim==='blade'
+  }
+  // 彙總展開：列出該部件的每個搭配，欄位可點擊排序
+  function slimTable(g, sortk, dir){
+    var dim = g.dim, combos = g.combos || [];
+    var arr = combos.slice().sort(function(a,b){
+      var x, y;
+      if(sortk==='rb'){ x=pairText(a,dim).toLowerCase(); y=pairText(b,dim).toLowerCase(); }
+      else { x=a[sortk]; y=b[sortk]; }
+      if(x<y) return -dir; if(x>y) return dir;
+      return b.appearances - a.appearances;
+    });
+    function th(k,label,cls){
+      var on = (sortk===k);
+      var ar = on ? (dir<0?'▼':'▲') : '◀';
+      return '<th class="sm '+(cls||'')+'" data-sk="'+k+'">'+label+'<span class="ar'+(on?' on':'')+'">'+ar+'</span></th>';
+    }
+    var body = arr.map(function(c){
+      var ns = (c.sources||[]).length;
+      return '<tr><td class="l opp" data-opp="'+esc(c.combo)+'">'+esc(pairText(c,dim))+'</td>'
+        +'<td style="color:'+wrColor(c.winrate)+'">'+pct(c.winrate)+'</td>'
+        +'<td>'+pct(c.pickrate)+'</td>'
+        +'<td>'+c.avg_points.toFixed(2)+'</td>'
+        +'<td>'+c.appearances+'</td>'
+        +'<td class="srccell"><span class="srctoggle" data-key="'+esc(c.combo)+'">'+t('src')+paren(ns)+'</span></td></tr>';
+    }).join('');
+    return '<table class="mini"><tr>'
+      +th('rb',pairLabel(dim),'l')+th('winrate',t('d_wr'))+th('pickrate',t('col_pr'))
+      +th('avg_points',t('col_ap'))+th('appearances',t('s_n'))+'<th>'+t('src')+'</th>'
+      +'</tr>'+body+'</table>';
+  }
+  function slimDetailHTML(g, i){
+    return '<div class="detailwrap"><div class="dcol" style="flex:1 1 100%">'
+      +'<div class="dh">'+t('s_by')+'</div>'
+      +'<div class="slimwrap" data-i="'+i+'" data-sk="appearances" data-dir="-1">'
+      +slimTable(g, 'appearances', -1)
+      +'</div></div></div>';
+  }
+  // 搜尋比對：完整模式比對該配置；彙總模式只要底下任一搭配符合即顯示
+  function bladeHay(x){ return [x.blade_label||'', x.blade||'', x.blade_zh||'', x.blade_ja||''].join(' ').toLowerCase(); }
+  // 單一配置的可搜尋字串：上蓋名（中／英／日）＋固鎖＋軸心
+  function comboHay(x){ return (bladeHay(x)+' '+(x.ratchet||'')+' '+(x.bit||'')).toLowerCase(); }
+  // 單框自動比對：打上蓋名／固鎖／軸心代號都能命中，不需選欄位
+  function matchRow(c){
+    var q = searchText.trim().toLowerCase();
+    if(!q) return true;
+    if(view==='blade')   return bladeHay(c).indexOf(q) >= 0;            // 上蓋模式：只搜上蓋名
+    if(view==='ratchet' || view==='bit')                               // 固鎖/軸心模式：只搜該部件代號
+      return String(c.key||'').toLowerCase().indexOf(q) >= 0;
+    if(c.combos){  // 完整模式的彙總列：自身上蓋名 或 底下任一搭配命中
+      return bladeHay(c).indexOf(q)>=0 || c.combos.some(function(x){ return comboHay(x).indexOf(q)>=0; });
+    }
+    return comboHay(c).indexOf(q)>=0;
+  }
+
+  // ---- 表頭 / 搜尋 / 說明（依模式切換；選手模式欄位不同）----
+  function headHTML(){
+    if(view==='players'){
+      return '<tr>'
+        +'<th class="l" data-k="rank"><span class="hl">#</span></th>'
+        +'<th class="l" data-k="player"><span class="hl">'+t('col_player')+'</span></th>'
+        +'<th data-k="winrate"><span class="hl">'+t('col_wr_battle')+'</span><span class="ar"></span></th>'
+        +'<th data-k="bwins"><span class="hl">'+t('col_record')+'</span><span class="ar"></span></th>'
+        +'<th data-k="rounds"><span class="hl">'+t('col_rounds')+'</span><span class="ar"></span></th>'
+        +'<th data-k="round_winrate"><span class="hl">'+t('col_wr_round')+'</span><span class="ar"></span></th>'
+        +'<th data-k="avg_round"><span class="hl">'+t('col_avg_round')+'</span><span class="ar"></span></th>'
+        +'</tr>';
+    }
+    return '<tr>'
+      +'<th class="l" data-k="rank"><span class="hl">#</span></th>'
+      +'<th class="l" data-k="combo"><span class="hl">'+t('col_combo')+'</span></th>'
+      +'<th data-k="winrate"><span class="hl">'+t('col_wr')+'</span><span class="ar"></span></th>'
+      +'<th data-k="pickrate"><span class="hl">'+t('col_pr')+'</span><span class="ar"></span></th>'
+      +'<th data-k="avg_points"><span class="hl">'+t('col_ap')+'</span><span class="ar"></span></th>'
+      +'<th data-k="appearances"><span class="hl">'+t('col_n')+'</span><span class="ar"></span></th>'
+      +'<th class="src" data-k="src"><span class="hl">'+t('src')+'</span></th>'
+      +'</tr>';
+  }
+  function setHead(){ thead.innerHTML = headHTML(); }
+  function updateSearchUI(){
+    var ph = view==='players' ? 'ph_player'
+           : view==='blade'   ? 'ph_blade'
+           : view==='ratchet' ? 'ph_ratchet'
+           : view==='bit'     ? 'ph_bit'
+           : 'ph_combo';
+    sbox.placeholder = t(ph);
+  }
+  function setNote(){
+    var mh = (view==='players') ? '' : '<br>'+(
+      lang==='en' ? ('Only combos with ≥ '+MIN_N+' rounds are listed (small samples excluded).') :
+      lang==='ja' ? ('出場数 '+MIN_N+' 以上の組み合わせのみ表示（少サンプルは除外）。') :
+      ('僅列入場數 ≥ '+MIN_N+' 的配置（小樣本不計）。'));
+    document.getElementById('note').innerHTML = (view==='players')
+      ? (t('pnote1')+'<br>'+t('pnote2')) : (t('note1')+'<br>'+t('note2')+mh);
+  }
+
+  // ---- 選手模式：從 D.battles 聚合每位選手 ----
+  var FINPTS = {Spin:1, Over:2, Burst:2, Xtreme:3, Draw:0};
+  var _players = null;
+  function aggPlayers(){
+    if(_players) return _players;
+    var map = {};
+    (D.battles||[]).forEach(function(bt){
+      [['a', bt.player_a, bt.player_b], ['b', bt.player_b, bt.player_a]].forEach(function(t3){
+        var side=t3[0], name=t3[1], opp=t3[2];
+        if(!name) return;
+        var p = map[name];
+        if(!p){
+          p = map[name] = { name:name, battles:0, bwins:0,
+            rounds:0, rwins:0, rpoints:0,
+            perRound:{}, perRoundPoints:{}, perRoundWins:{}, finishes:{}, combosUsed:{}, history:[] };
+        }
+        p.battles++;
+        var won = !!bt.battle_winner && bt.battle_winner===side.toUpperCase();
+        if(won) p.bwins++;
+        (bt.rounds||[]).forEach(function(r){
+          var combo = (side==='a'?r.a:r.b) || '';
+          if(!combo.trim()) return;
+          p.rounds++;
+          var rno = r.no;
+          p.perRound[rno] = (p.perRound[rno]||0) + 1;
+          var rwon = !!r.winner && r.winner===side.toUpperCase();
+          if(rwon){
+            p.rwins++;
+            p.rpoints += (FINPTS[r.finish]||0);
+            p.perRoundPoints[rno] = (p.perRoundPoints[rno]||0) + (FINPTS[r.finish]||0);
+            p.perRoundWins[rno] = (p.perRoundWins[rno]||0) + 1;
+            if(r.finish) p.finishes[r.finish] = (p.finishes[r.finish]||0) + 1;
+          }
+          // 以「完整配置」歸戶，累計『該選手用此配置』的個人數據（圖/名等身分沿用全站 c）
+          var c = comboByKey[combo];
+          var cu = p.combosUsed[combo];
+          if(!cu){
+            cu = p.combosUsed[combo] = {
+              combo: combo,
+              blade: c?c.blade:combo, blade_label: c?c.blade_label:combo,
+              blade_zh: c?c.blade_zh:'', blade_ja: c?c.blade_ja:'',
+              ratchet: c?c.ratchet:'', bit: c?c.bit:'', system: c?c.system:'',
+              blade_imgs: c?c.blade_imgs:[],
+              appearances:0, wins:0, points:0,
+              finishes:{}, rounds:{}, round_wins:{}, _mu:{}, _src:{}
+            };
+          }
+          cu.appearances++;
+          cu.rounds[rno] = (cu.rounds[rno]||0) + 1;
+          if(rwon){
+            cu.wins++;
+            cu.points += (FINPTS[r.finish]||0);
+            cu.round_wins[rno] = (cu.round_wins[rno]||0) + 1;
+            if(r.finish) cu.finishes[r.finish] = (cu.finishes[r.finish]||0) + 1;
+          }
+          // 個人對位：他用此配置那回合的對手配置
+          var oppCombo = (side==='a'?r.b:r.a) || '';
+          if(oppCombo.trim()){
+            var mu = cu._mu[oppCombo] || (cu._mu[oppCombo] = {n:0, wins:0, sources:{}});
+            mu.n++; if(rwon) mu.wins++;
+            if(bt.video_url && !mu.sources[bt.video_url]){
+              mu.sources[bt.video_url] = { url:bt.video_url, event:bt.event,
+                title:(bt.player_a||'?')+' vs '+(bt.player_b||'?'), video_title:bt.video_title };
+            }
+          }
+          // 個人來源：他用此配置出現過的影片（依影片去重）
+          if(bt.video_url && !cu._src[bt.video_url]){
+            cu._src[bt.video_url] = { url:bt.video_url, event:bt.event, date:bt.date,
+              title:(bt.player_a||'?')+' vs '+(bt.player_b||'?'), video_title:bt.video_title };
+          }
+        });
+        p.history.push({ bt:bt, side:side, opp:opp, won:won,
+          myscore:(side==='a'?bt.final_score_a:bt.final_score_b),
+          oppscore:(side==='a'?bt.final_score_b:bt.final_score_a) });
+      });
+    });
+    _players = Object.keys(map).map(function(k){
+      var p = map[k];
+      p.winrate       = p.battles ? p.bwins/p.battles : 0;   // 整場 3on3 勝率
+      p.round_winrate = p.rounds ? p.rwins/p.rounds : 0;     // 回合勝率
+      p.avg_round     = p.rounds ? p.rpoints/p.rounds : 0;   // 回合平均得分
+      // 用過的所有完整配置：把個人累計算成 detailHTML 能直接吃的 combo 物件（依使用次數排序）
+      p.allCombos  = Object.keys(p.combosUsed).map(function(k2){ return p.combosUsed[k2]; });
+      p.allCombos.forEach(function(cu){
+        cu.winrate    = cu.appearances ? cu.wins/cu.appearances : 0;
+        cu.pickrate   = p.rounds ? cu.appearances/p.rounds : 0;   // 出場率＝他用此配置回合 ÷ 他全部回合
+        cu.avg_points = cu.appearances ? cu.points/cu.appearances : 0;
+        cu.matchups = Object.keys(cu._mu).map(function(opp){
+          var m = cu._mu[opp];
+          return { opp:opp, n:m.n, wins:m.wins, winrate:m.n?m.wins/m.n:0,
+                   sources:Object.keys(m.sources).map(function(s){ return m.sources[s]; }) };
+        }).sort(function(a,b){ return (b.n-a.n) || (b.winrate-a.winrate); });
+        cu.sources = Object.keys(cu._src).map(function(s){ return cu._src[s]; });
+      });
+      p.allCombos.sort(function(a,b){ return b.appearances-a.appearances; });
+      return p;
+    });
+    return _players;
+  }
+  // 選手名 → slug（用 build 產出的 D.players 對照，當作個人頁網址的單一來源）
+  var _slugByName = null;
+  function playerSlug(name){
+    if(!_slugByName){
+      _slugByName = {};
+      (D.players||[]).forEach(function(pp){ if(pp && pp.name) _slugByName[pp.name] = pp.slug; });
+    }
+    return _slugByName[name] || '';
+  }
+  function matchPlayer(p){
+    var q = searchText.trim().toLowerCase();
+    return !q || (p.name||'').toLowerCase().indexOf(q) >= 0;
+  }
+  // 戰績字串：中「6勝0敗」/ 英「6W 0L」/ 日「6勝0敗」
+  function recordStr(w, l){
+    var sep = lang==='en' ? ' ' : '';
+    return w + t('rec_w') + sep + l + t('rec_l');
+  }
+  // 常用陀螺：每個配置一列＝仿完整陀螺主列（圖＋名＋固鎖·軸心｜勝率｜出場率｜平均得分｜場數｜影片來源），
+  // 點該列展開＝該配置的「全站」明細（每回合／得分方式／勝負樣本／對位戰績），與配置排行榜一致。
+  function playerComboRow(cu, pi){
+    var head = '<div class="pcmain" data-pi="'+pi+'" data-combo="'+esc(cu.combo)+'">'
+      +'<div class="cwrap pccfg">'+pic(cu)
+        +'<div class="nm"><span class="blade">'+esc(bladeName(cu))
+          +(cu.system==='CX'?'<span class="tag">CX</span>':'')+'</span>'
+          +'<span class="sub">'+esc(cu.ratchet||'—')+' · '+esc(cu.bit||'—')+'</span></div></div>'
+      +'<span class="pcnum wr" style="color:'+wrColor(cu.winrate)+'">'+pct(cu.winrate)+'</span>'
+      +'<span class="pcnum">'+pct(cu.pickrate)+'</span>'
+      +'<span class="pcnum">'+cu.avg_points.toFixed(2)+'</span>'
+      +'<span class="pcnum dim">'+cu.appearances+'</span>'
+      +'<span class="pcsrc"><span class="srctoggle" data-pi="'+pi+'" data-combo="'+esc(cu.combo)+'">'+t('src')+paren((cu.sources||[]).length)+'</span></span>'
+    +'</div>';
+    return '<div class="pcrow">'+head+'<div class="pcdetail hidden">'+detailHTML(cu,null,cu.combo,pi)+'</div></div>';
+  }
+  // 常用陀螺表頭（可點擊排序；目前排序欄顯示箭頭）
+  function pcHead(sk, dir){
+    function cell(k, label, cls){
+      var on = (sk===k);
+      var ar = on ? (dir<0?'▼':'▲') : '◀';
+      return '<span class="'+cls+' pcsort" data-sk="'+k+'">'+label+'<span class="ar'+(on?' on':'')+'">'+ar+'</span></span>';
+    }
+    return '<div class="pchead">'
+      + cell('blade', t('d_topbeys'), 'pccfg')
+      + cell('winrate', t('col_wr'), 'pcnum')
+      + cell('pickrate', t('col_pr'), 'pcnum')
+      + cell('avg_points', t('col_ap'), 'pcnum')
+      + cell('appearances', t('col_rounds'), 'pcnum')
+      + '<span class="pcsrc">'+t('src')+'</span>'
+    +'</div>';
+  }
+  // div 型清單：預設只顯示前 n 列，其餘收進 .morewrap，附「顯示更多」按鈕（inline、一次展開全部）
+  function moreWrap(rows, n){
+    if(rows.length <= n) return rows.join('');
+    var extra = rows.length - n;
+    return rows.slice(0, n).join('')
+      + '<div class="morewrap hidden">' + rows.slice(n).join('') + '</div>'
+      + '<div class="showmore" data-more="' + extra + '">' + t('show_more') + '（' + extra + '）▼</div>';
+  }
+  // 依排序鍵排好的配置列（名稱用 bladeName 比字串、其餘比數值；同值以場數降冪 tiebreak）
+  function playerComboRows(p, pi, sk, dir){
+    var arr = p.allCombos.slice().sort(function(a,b){
+      var x, y;
+      if(sk==='blade'){ x=bladeName(a).toLowerCase(); y=bladeName(b).toLowerCase(); }
+      else { x=a[sk]; y=b[sk]; }
+      if(x<y) return -dir; if(x>y) return dir;
+      return b.appearances - a.appearances;
+    });
+    return moreWrap(arr.map(function(cu){ return playerComboRow(cu, pi); }), 5);
+  }
+  // 列出該選手用過的所有完整配置（仿排行榜：可排序表頭＋每列可展開「個人」明細）
+  function playerComboList(p, pi){
+    if(!p.allCombos.length) return '<div class="dim">—</div>';
+    var sk='appearances', dir=-1;   // 預設依場數（最常用）由多到少
+    return '<div class="pclist" data-pi="'+pi+'" data-sk="'+sk+'" data-dir="'+dir+'">'
+      + pcHead(sk,dir) + playerComboRows(p, pi, sk, dir) + '</div>';
+  }
+  // 每回合表現（沿用 roundsTable 版面，改餵選手資料）
+  function playerRoundsTable(p){
+    var rs = Object.keys(p.perRound).map(Number).sort(function(a,b){return a-b;});
+    if(!rs.length) return '<div class="dim">—</div>';
+    var body = rs.map(function(r){
+      var ap=p.perRound[r]||0, w=p.perRoundWins[r]||0;
+      var wr=ap?w/ap:0;
+      var avg=ap?(p.perRoundPoints[r]||0)/ap:0;
+      return '<tr><td class="l">R'+r+'</td><td>'+ap+'</td>'
+        +'<td style="color:'+wrColor(wr)+'">'+pct(wr)+'</td>'
+        +'<td>'+avg.toFixed(2)+'</td></tr>';
+    }).join('');
+    // 合計列已移到外層選手列（出場回合／回合勝率／回合平均得分），這裡只留逐回合
+    return '<table class="mini"><tr><th class="l">'+t('d_round')+'</th><th>'+t('d_plays')+'</th><th>'+t('d_wr')+'</th><th>'+t('d_avg')+'</th></tr>'+body+'</table>';
+  }
+  // 單場逐回合計分板：我方配置 vs 對方配置、結束方式、勝負
+  function battleScoreboard(h){
+    var side = h.side;
+    var body = (h.bt.rounds||[]).map(function(r){
+      var mine = (side==='a'?r.a:r.b), opp = (side==='a'?r.b:r.a);
+      var rwon = !!r.winner && r.winner===side.toUpperCase();
+      var w = r.winner ? (rwon?t('d_win'):t('d_loss')) : '—';
+      var wc = r.winner ? (rwon?'var(--good)':'var(--bad)') : 'var(--dim)';
+      return '<tr><td class="l">R'+r.no+'</td>'
+        +'<td class="l">'+esc(oppName(mine))+'</td>'
+        +'<td>'+esc(r.finish?finName(r.finish):'—')+'</td>'
+        +'<td class="l">'+esc(oppName(opp))+'</td>'
+        +'<td style="color:'+wc+'">'+w+'</td></tr>';
+    }).join('');
+    return '<table class="mini"><tr><th class="l">'+t('d_round')+'</th><th class="l">'+t('d_mine')+'</th><th>'+t('d_finish')+'</th><th class="l">'+t('d_opp')+'</th><th>'+t('d_result')+'</th></tr>'+body+'</table>';
+  }
+  // 戰績列表（OP.GG 式）：一場一列，可展開逐回合＋YT 回放
+  function playerHistory(p){
+    if(!p.history.length) return '<div class="dim">—</div>';
+    var hs = p.history.slice().sort(function(a,b){
+      var x=a.bt.date||'', y=b.bt.date||'';
+      return x<y?1:(x>y?-1:0);   // 新到舊
+    });
+    var rows = hs.map(function(h){
+      var res = h.won ? '<span style="color:var(--good)">'+t('d_win')+'</span>'
+                      : '<span style="color:var(--bad)">'+t('d_loss')+'</span>';
+      var score = esc((h.myscore||'0')+'-'+(h.oppscore||'0'));
+      var rep = h.bt.video_url ? '<a class="replay" href="'+encodeURI(h.bt.video_url)+'" target="_blank" rel="noopener">▶ '+t('d_replay')+'</a>' : '';
+      var evt = esc(h.bt.event||'') + (h.bt.date?(' · '+esc(h.bt.date)):'');
+      return '<div class="bhrow">'
+        +'<div class="bhmain">'
+          +'<span class="bhopp">'+t('p_vs')+' '+esc(h.opp||'?')+'</span>'
+          +'<span class="bhres">'+res+' '+score+'</span>'
+          +'<span class="bhevt dim">'+evt+'</span>'
+          +rep
+        +'</div>'
+        +'<div class="bhrounds hidden">'+battleScoreboard(h)+'</div>'
+      +'</div>';
+    });
+    return moreWrap(rows, 5);
+  }
+  function playerDetailHTML(p, pi){
+    return '<div class="detailwrap">'
+      +'<div class="dcol" style="flex:1 1 100%">'
+        +'<div style="display:flex;flex-wrap:wrap;gap:18px">'
+          +'<div style="flex:2 1 360px"><div class="dh">'+t('d_career')+'</div>'+playerRoundsTable(p)+'</div>'
+          +'<div style="flex:1 1 200px"><div class="dh">'+t('d_finish')+'</div>'+finishBlock(p)+'</div>'
+        +'</div>'
+      +'</div>'
+      +'<div class="dcol" style="flex:1 1 100%"><div class="dh">'+t('d_topbeys')+'</div>'+playerComboList(p, pi)+'</div>'
+      +'<div class="dcol" style="flex:1 1 100%"><div class="dh">'+t('d_record')+'</div>'+playerHistory(p)+'</div>'
+    +'</div>';
+  }
+  function renderPlayers(){
+    var arr = aggPlayers().filter(matchPlayer);
+    arr.sort(function(a,b){
+      var x=a[sortKey], y=b[sortKey];
+      if(x==null) x=0; if(y==null) y=0;
+      if(x<y) return -sortDir; if(x>y) return sortDir;
+      return b.battles - a.battles;
+    });
+    currentArr = arr;
+    rowsEl.innerHTML = arr.map(function(p,i){
+      var slug = playerSlug(p.name);   // 點整列＝跳該選手個人頁（不就地展開）
+      var nm = slug ? '<a class="plink" href="/player/'+slug+'/">'+esc(p.name)+'</a>' : esc(p.name);
+      var href = slug ? ' data-href="/player/'+slug+'/"' : '';
+      return '<tr class="main"'+href+' data-i="'+i+'"'+(slug?' style="cursor:pointer"':'')+'>'
+        +'<td class="rank">'+(i+1)+'</td>'
+        +'<td class="combo"><div class="cwrap"><div class="nm"><span class="blade">'+nm+'</span></div></div></td>'
+        +'<td class="num wr" style="color:'+wrColor(p.winrate)+'">'+pct(p.winrate)
+          +'<div class="bar"><i style="width:'+(p.winrate*100)+'%;background:'+wrColor(p.winrate)+'"></i></div></td>'
+        +'<td class="num">'+recordStr(p.bwins, p.battles-p.bwins)+'</td>'
+        +'<td class="num" style="color:var(--dim)">'+p.rounds+'</td>'
+        +'<td class="num" style="color:'+wrColor(p.round_winrate)+'">'+pct(p.round_winrate)+'</td>'
+        +'<td class="num">'+p.avg_round.toFixed(2)+'</td>'
+        +'</tr>';
+    }).join('');
+    var ars = thead.querySelectorAll('th .ar');
+    for(var j=0;j<ars.length;j++){ ars[j].textContent='◀'; ars[j].classList.remove('on'); }
+    var th = thead.querySelector('th[data-k="'+sortKey+'"] .ar');
+    if(th){ th.textContent = sortDir<0 ? '▼' : '▲'; th.classList.add('on'); }
+  }
+
+  // 單一選手全頁個人檔（profile mode）：由烤出的靜態頁注入 window.PROFILE_SLUG 觸發，
+  // 重用 aggPlayers／playerDetailHTML，把整頁變成該選手的個人檔（隱藏排行表頭與控制項）。
+  function renderProfile(slug){
+    document.body.classList.add('profile-mode');
+    var name = '';
+    (D.players||[]).forEach(function(pp){ if(pp && pp.slug===slug) name = pp.name; });
+    if(!name){ try{ name = decodeURIComponent(slug); }catch(e){ name = slug; } }
+    var home = lang==='en' ? 'Home' : (lang==='ja' ? 'ホーム' : '首頁');
+    var crumb = document.querySelector('.crumbs');
+    if(crumb){ crumb.innerHTML = '<a href="/">'+home+'</a> <span>›</span> '
+      + '<a href="/rankings/?view=players">'+t('view_players')+'</a> <span>›</span> '+esc(name); }
+    document.getElementById('title').style.display = 'none';   // 個人頁：名字改放卡片內，隱藏麵包屑下的大標題
+    var arr = aggPlayers(), p = null;
+    for(var i=0;i<arr.length;i++){ if(arr[i].name===name){ p = arr[i]; break; } }
+    if(!p){ rowsEl.innerHTML = '<tr><td colspan="7"><div class="dim">'+t('m_nodata')+'</div></td></tr>'; return; }
+    currentArr = [p];
+    var hdr = '<div class="phdr">'
+      + '<span class="pname">'+esc(name)+'</span>'
+      + '<span class="pwr" style="color:'+wrColor(p.winrate)+'">'+pct(p.winrate)+'</span>'
+      + '<span class="pstat">'+recordStr(p.bwins, p.battles-p.bwins)+'</span>'
+      + '<span class="pmeta">'+p.rounds+' '+t('col_rounds')+' · '+t('col_wr_round')+' '+pct(p.round_winrate)
+        +' · '+t('col_avg_round')+' '+p.avg_round.toFixed(2)+'</span>'
+      + '</div>';
+    rowsEl.innerHTML = '<tr><td colspan="7">'+hdr+playerDetailHTML(p, 0)+'</td></tr>';
+  }
+
+  function render(){
+    if(view==='players'){ renderPlayers(); return; }
+    var agg = view!=='full';
+    var partAgg = (view==='ratchet' || view==='bit');   // 固鎖/軸心：無圖、用代號
+    var arr = (agg ? aggByDim(view) : D.combos).filter(matchRow)
+                .filter(function(c){ return (c.appearances||0) >= MIN_N; });   // 濾掉小樣本
+    arr.sort(function(a,b){
+      var x=a[sortKey], y=b[sortKey];
+      if(x<y) return -sortDir; if(x>y) return sortDir;
+      return b.appearances - a.appearances;
+    });
+    currentArr = arr;
+    rowsEl.innerHTML = arr.map(function(c,i){
+      var nm = partAgg ? esc(c.key) : esc(bladeName(c));
+      var picHtml = partAgg ? partPic(view, c.key) : pic(c);
+      var cxTag = (!partAgg && c.system==='CX') ? '<span class="tag">CX</span>' : '';
+      var sub = !agg ? '<span class="sub">'+esc(c.ratchet||'—')+' · '+esc(c.bit||'—')+'</span>'
+                     : '<span class="sub">'+(c.combos?c.combos.length:0)+' '+t('s_combos')+'</span>';
+      var detail = agg ? slimDetailHTML(c,i) : detailHTML(c,i);
+      var ns = (c.sources||[]).length;   // 完整＝自身來源；聚合維度＝彙整後的來源
+      var srcCell = ns ? '<span class="srctoggle" data-i="'+i+'">'+t('src')+paren(ns)+'</span>'
+                       : '<span class="dim">—</span>';
+      return '<tr class="main" data-i="'+i+'">'
+        + '<td class="rank">'+(i+1)+'</td>'
+        + '<td class="combo"><div class="cwrap">'+picHtml
+          + '<div class="nm"><span class="blade">'+nm+cxTag+'</span>'
+            + sub+'</div>'
+          + '</div></td>'
+        + '<td class="num wr" style="color:'+wrColor(c.winrate)+'">'+pct(c.winrate)
+          + '<div class="bar"><i style="width:'+(c.winrate*100)+'%;background:'+wrColor(c.winrate)+'"></i></div></td>'
+        + '<td class="num">'+pct(c.pickrate)+'</td>'
+        + '<td class="num">'+c.avg_points.toFixed(2)+'</td>'
+        + '<td class="num" style="color:var(--dim)">'+c.appearances+'</td>'
+        + '<td class="num src">'+srcCell+'</td>'
+        + '</tr>'
+        + '<tr class="detail hidden"><td colspan="7">'+detail+'</td></tr>';
+    }).join('');
+    thead.querySelectorAll('th .ar').forEach(function(s){ s.textContent='◀'; s.classList.remove('on'); });
+    var th = thead.querySelector('th[data-k="'+sortKey+'"] .ar');
+    if(th){ th.textContent = sortDir<0 ? '▼' : '▲'; th.classList.add('on'); }
+  }
+
+  // 選手面板裡的元素：用 data-pi（選手在 currentArr 的索引）+ data-combo 取「個人」配置物件
+  function comboCtx(el){
+    var pi = el.dataset.pi, ck = el.dataset.combo;
+    if(pi===undefined || ck===undefined) return null;
+    var p = currentArr[+pi];
+    return (p && p.combosUsed) ? p.combosUsed[ck] : null;
+  }
+  // 點列展開／收合；點「影片來源」開彈窗
+  rowsEl.addEventListener('click', function(e){
+    if(e.target.closest('a')) return;           // 放行連結（▶回放），不攔截
+    var sm = e.target.closest('.showmore');      // 顯示更多／收合：同一顆按鈕切換
+    if(sm){
+      e.stopPropagation();
+      var extra = sm.getAttribute('data-more');
+      var moreL = t('show_more')+'（'+extra+'）▼', lessL = t('show_less')+' ▲';
+      var smtr = sm.closest('tr.showmore-row');
+      if(smtr){                                  // 表格型（對位戰績）
+        var moreRows = smtr.closest('table').querySelectorAll('tr.more');
+        var collapsed = moreRows.length && moreRows[0].classList.contains('hidden');
+        [].forEach.call(moreRows, function(x){ x.classList.toggle('hidden', !collapsed); });
+        sm.innerHTML = collapsed ? lessL : moreL;
+        return;
+      }
+      var mw = sm.previousElementSibling;         // div 型（戰績／常用陀螺）
+      if(mw && mw.classList.contains('morewrap')){
+        var nowHidden = mw.classList.toggle('hidden');
+        sm.innerHTML = nowHidden ? moreL : lessL;
+      }
+      return;
+    }
+    var bh = e.target.closest('.bhmain');        // 選手戰績：點某場展開逐回合計分板
+    if(bh){
+      e.stopPropagation();
+      var rd = bh.nextElementSibling;
+      if(rd && rd.classList.contains('bhrounds')){ rd.classList.toggle('hidden'); bh.classList.toggle('open'); }
+      return;
+    }
+    var tog = e.target.closest('.srctoggle');
+    if(tog){   // 影片來源：跳彈窗列出來源影片
+      e.stopPropagation();
+      var item;
+      if(tog.dataset.opp !== undefined){          // 對位：這兩顆對戰的影片
+        var mw = tog.closest('.muwrap');
+        var msrc = mw.dataset.pi!==undefined ? comboCtx(mw) : currentArr[+mw.getAttribute('data-i')];
+        item = ((msrc&&msrc.matchups)||[]).filter(function(x){ return x.opp===tog.dataset.opp; })[0];
+      } else if(tog.dataset.key !== undefined){   // 精簡模式：依配置鍵找到該搭配
+        var sw2 = tog.closest('.slimwrap'); var bi = +sw2.getAttribute('data-i');
+        item = (currentArr[bi].combos||[]).filter(function(x){ return x.combo===tog.dataset.key; })[0];
+      } else if(tog.dataset.pi !== undefined){    // 選手面板：配置主列「個人」影片來源
+        item = comboCtx(tog);
+      } else {                                     // 完整模式主列
+        item = currentArr[+tog.getAttribute('data-i')];
+      }
+      openModal(item);
+      return;
+    }
+    var oppCell = e.target.closest('td.opp');
+    if(oppCell){
+      e.stopPropagation();
+      openOppModal(oppCell.getAttribute('data-opp'));
+      return;
+    }
+    var muth = e.target.closest('th.mu');
+    if(muth){
+      e.stopPropagation();
+      var wrap = muth.closest('.muwrap');
+      var muc = wrap.dataset.pi!==undefined ? comboCtx(wrap) : currentArr[+wrap.getAttribute('data-i')];
+      var k = muth.getAttribute('data-mk');
+      var cur = wrap.getAttribute('data-mk'), dir = +wrap.getAttribute('data-dir');
+      if(cur===k){ dir = -dir; } else { dir = (k==='opp') ? 1 : -1; }  // 名稱預設升冪、數字預設降冪
+      wrap.setAttribute('data-mk', k); wrap.setAttribute('data-dir', dir);
+      wrap.innerHTML = matchupTable(oppMatchups(muc), k, dir);
+      return;
+    }
+    var smth = e.target.closest('th.sm');
+    if(smth){
+      e.stopPropagation();
+      var sw = smth.closest('.slimwrap'); var si = +sw.getAttribute('data-i');
+      var sk = smth.getAttribute('data-sk');
+      var scur = sw.getAttribute('data-sk'), sdir = +sw.getAttribute('data-dir');
+      if(scur===sk){ sdir = -sdir; } else { sdir = (sk==='rb') ? 1 : -1; }  // 名稱升冪、數字降冪
+      sw.setAttribute('data-sk', sk); sw.setAttribute('data-dir', sdir);
+      sw.innerHTML = slimTable(currentArr[si], sk, sdir);
+      return;
+    }
+    var pcsort = e.target.closest('.pchead .pcsort');   // 常用陀螺表頭：點欄位切換排序
+    if(pcsort){
+      e.stopPropagation();
+      var plist = pcsort.closest('.pclist'); var pp = currentArr[+plist.dataset.pi];
+      if(!pp) return;
+      var pk = pcsort.dataset.sk, pcur = plist.dataset.sk, pdir = +plist.dataset.dir;
+      pdir = (pcur===pk) ? -pdir : (pk==='blade' ? 1 : -1);   // 名稱預設升冪、數字預設降冪
+      plist.dataset.sk = pk; plist.dataset.dir = pdir;
+      plist.innerHTML = pcHead(pk, pdir) + playerComboRows(pp, +plist.dataset.pi, pk, pdir);
+      return;
+    }
+    var pcm = e.target.closest('.pcmain');       // 選手面板裡的配置列：展開該配置全站明細
+    if(pcm && pcm.dataset.combo!==undefined){
+      e.stopPropagation();
+      var pd = pcm.nextElementSibling;
+      if(pd && pd.classList.contains('pcdetail')){ pd.classList.toggle('hidden'); pcm.classList.toggle('open'); }
+      return;
+    }
+    var tr = e.target.closest('tr.main');
+    if(!tr) return;
+    if(tr.dataset.href){ location.href = tr.dataset.href; return; }   // 選手列：點整列直接跳個人頁
+    var d = tr.nextElementSibling;
+    if(d && d.classList.contains('detail')){ d.classList.toggle('hidden'); tr.classList.toggle('open'); }
+  });
+
+  var modal=document.getElementById('modal'), mtitle=document.getElementById('mtitle'), mbody=document.getElementById('mbody');
+  // 影片來源彈窗（主列／對位／精簡共用；不顯示「誰使用」）
+  function openModal(c){
+    var src=(c&&c.sources)||[];
+    mtitle.textContent=t('src')+srcCount(src.length);
+    mbody.innerHTML=sourcesLinks(src);
+    modal.classList.remove('hidden');
+  }
+  // 對手配置彈窗：顯示該顆陀螺的圖片與配置
+  function openOppModal(opp){
+    var c = comboByKey[opp];
+    mtitle.textContent = oppName(opp);
+    if(!c){ mbody.innerHTML = '<div class="dim">'+t('m_nodata')+'</div>'; modal.classList.remove('hidden'); return; }
+    var cx = (c.system==='CX') ? '<span class="tag">CX</span>' : '';
+    function part(imgHtml, name, label){
+      return '<div class="opppart">'+imgHtml
+        +'<div class="nm"><span class="blade">'+name+'</span><span class="sub">'+label+'</span></div></div>';
+    }
+    // 上蓋／固鎖／軸心 各自的零件圖，由左到右
+    mbody.innerHTML = '<div class="oppcombo">'
+      + part(pic(c), esc(bladeName(c))+cx, t('mode_blade'))
+      + part(partPic('ratchet', c.ratchet||''), esc(c.ratchet||'—'), t('mode_ratchet'))
+      + part(partPic('bit', c.bit||''), esc(c.bit||'—'), t('mode_bit'))
+      + '</div>';
+    modal.classList.remove('hidden');
+  }
+  function closeModal(){ modal.classList.add('hidden'); }
+  document.getElementById('mclose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+
+  // 表頭排序：用委派（表頭會依模式重建，不能綁在固定 th 上）
+  thead.addEventListener('click', function(e){
+    var th = e.target.closest('th[data-k]');
+    if(!th) return;
+    var k = th.getAttribute('data-k');
+    if(k==='rank'||k==='combo'||k==='src'||k==='player') return;
+    if(sortKey===k){ sortDir = -sortDir; } else { sortKey = k; sortDir = -1; }
+    render();
+  });
+
+  // 搜尋：模式切換 + 輸入即時過濾
+  // 套用目前語言到靜態介面（標題、欄位標題、下拉選項、搜尋提示、底部說明）
+  function applyI18n(){
+    document.getElementById('title').textContent = t('title');
+    setHead();   // 表頭依模式（配置／選手）重建，含翻譯
+    var viewTxt = {full:t('view_full'), blade:t('view_blade'), ratchet:t('view_ratchet'),
+                   bit:t('view_bit'), players:t('view_players')};
+    Array.prototype.forEach.call(viewSel.options, function(o){ o.textContent = viewTxt[o.value]; });
+    updateSearchUI();
+    setNote();
+    document.getElementById('stats').textContent = t('stats').replace('{n}', D.total_rounds);
+  }
+
+  var sbox = document.getElementById('sbox');
+  sbox.addEventListener('input', function(){ searchText = sbox.value; render(); });
+  // 從首頁搜尋框帶過來的關鍵字（?q=）自動填入
+  try{
+    var q0 = new URLSearchParams(location.search).get('q');
+    if(q0){ sbox.value = q0; searchText = q0; }
+  }catch(e){}
+
+  // 語言切換：整個介面（含上蓋名稱）跟著切換
+  var langSel = document.getElementById('lang');
+  langSel.addEventListener('change', function(){ lang = langSel.value; applyI18n(); if(window.PROFILE_SLUG){ renderProfile(window.PROFILE_SLUG); } else { render(); } });
+
+  // 模式切換：完整 / 上蓋 / 固鎖 / 軸心 / 選手
+  var viewSel = document.getElementById('view');
+  var PLAYER_SORT = ['winrate','bwins','rounds','round_winrate','avg_round'];
+  var COMBO_SORT  = ['winrate','pickrate','avg_points','appearances'];
+  viewSel.addEventListener('change', function(){
+    view = viewSel.value;
+    if(view==='players'){                          // 切到選手：用選手欄位的排序鍵
+      if(PLAYER_SORT.indexOf(sortKey)<0){ sortKey='winrate'; sortDir=-1; }
+    } else if(COMBO_SORT.indexOf(sortKey)<0){      // 切回配置：避開選手專屬鍵
+      sortKey='pickrate'; sortDir=-1;
+    }
+    setHead(); updateSearchUI(); setNote(); render();
+  });
+
+  if(window.PROFILE_SLUG){               // 個人頁模式：烤出的靜態頁注入 slug → 直接渲染該選手全頁
+    applyI18n();
+    renderProfile(window.PROFILE_SLUG);
+  } else {
+    try{                                  // 網址帶 ?view= 直接開對應檢視（讓「選手戰績」可深連結到選手列）
+      var v0 = new URLSearchParams(location.search).get('view');
+      if(v0 && ['full','blade','ratchet','bit','players'].indexOf(v0) >= 0){
+        view = v0; viewSel.value = v0;
+        if(view==='players' && PLAYER_SORT.indexOf(sortKey) < 0){ sortKey='winrate'; sortDir=-1; }
+      }
+    }catch(e){}
+    applyI18n();
+    render();
+  }
+})();
+</script>
+<script>/* 測試站(test.*)：把賽事管理/登入連結指向測試後台 app-test */
+(function(){if(location.hostname.indexOf('test.')!==0)return;var b='https://app-test.beytop.net',ls=document.querySelectorAll('a[href^="https://app.beytop.net"]'),i;for(i=0;i<ls.length;i++){ls[i].href=ls[i].getAttribute('href').replace('https://app.beytop.net',b);}})();</script>
+</body>
+</html>

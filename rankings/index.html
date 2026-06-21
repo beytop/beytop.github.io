@@ -64,6 +64,7 @@
   body.profile-mode .faq, body.profile-mode #note,
   body.profile-mode .headr .search{display:none}
   .phdr{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;padding:4px 0 16px}
+  .phdr .pname{flex:0 0 100%;text-align:left;font-size:38px;font-weight:800;line-height:1.15;margin-bottom:6px}
   .phdr .pwr{font-size:30px;font-weight:800;line-height:1}
   .phdr .pstat{font-weight:700}
   .phdr .pmeta{color:var(--dim)}
@@ -253,7 +254,7 @@
     <div style="display:flex; gap:18px; flex-wrap:wrap">
       <a href="#">YouTube 頻道</a>
       <a href="/rankings/">戰鬥陀螺X 配置排行</a>
-      <a href="players.html">選手戰績</a>
+      <a href="/rankings/?view=players">選手戰績</a>
       <a href="events.html">比賽回看</a>
       <a href="/about/">關於 BeyTop</a>
     </div>
@@ -894,9 +895,10 @@
     });
     currentArr = arr;
     rowsEl.innerHTML = arr.map(function(p,i){
-      var slug = playerSlug(p.name);   // 點名字＝跳該選手個人頁（OP.GG 式）；點其餘列仍就地展開預覽
+      var slug = playerSlug(p.name);   // 點整列＝跳該選手個人頁（不就地展開）
       var nm = slug ? '<a class="plink" href="/player/'+slug+'/">'+esc(p.name)+'</a>' : esc(p.name);
-      return '<tr class="main" data-i="'+i+'">'
+      var href = slug ? ' data-href="/player/'+slug+'/"' : '';
+      return '<tr class="main"'+href+' data-i="'+i+'"'+(slug?' style="cursor:pointer"':'')+'>'
         +'<td class="rank">'+(i+1)+'</td>'
         +'<td class="combo"><div class="cwrap"><div class="nm"><span class="blade">'+nm+'</span></div></div></td>'
         +'<td class="num wr" style="color:'+wrColor(p.winrate)+'">'+pct(p.winrate)
@@ -905,8 +907,7 @@
         +'<td class="num" style="color:var(--dim)">'+p.rounds+'</td>'
         +'<td class="num" style="color:'+wrColor(p.round_winrate)+'">'+pct(p.round_winrate)+'</td>'
         +'<td class="num">'+p.avg_round.toFixed(2)+'</td>'
-        +'</tr>'
-        +'<tr class="detail hidden"><td colspan="7">'+playerDetailHTML(p, i)+'</td></tr>';
+        +'</tr>';
     }).join('');
     var ars = thead.querySelectorAll('th .ar');
     for(var j=0;j<ars.length;j++){ ars[j].textContent='◀'; ars[j].classList.remove('on'); }
@@ -925,12 +926,13 @@
     var crumb = document.querySelector('.crumbs');
     if(crumb){ crumb.innerHTML = '<a href="/">'+home+'</a> <span>›</span> '
       + '<a href="/rankings/?view=players">'+t('view_players')+'</a> <span>›</span> '+esc(name); }
-    document.getElementById('title').textContent = name;
+    document.getElementById('title').style.display = 'none';   // 個人頁：名字改放卡片內，隱藏麵包屑下的大標題
     var arr = aggPlayers(), p = null;
     for(var i=0;i<arr.length;i++){ if(arr[i].name===name){ p = arr[i]; break; } }
     if(!p){ rowsEl.innerHTML = '<tr><td colspan="7"><div class="dim">'+t('m_nodata')+'</div></td></tr>'; return; }
     currentArr = [p];
     var hdr = '<div class="phdr">'
+      + '<span class="pname">'+esc(name)+'</span>'
       + '<span class="pwr" style="color:'+wrColor(p.winrate)+'">'+pct(p.winrate)+'</span>'
       + '<span class="pstat">'+recordStr(p.bwins, p.battles-p.bwins)+'</span>'
       + '<span class="pmeta">'+p.rounds+' '+t('col_rounds')+' · '+t('col_wr_round')+' '+pct(p.round_winrate)
@@ -1086,6 +1088,7 @@
     }
     var tr = e.target.closest('tr.main');
     if(!tr) return;
+    if(tr.dataset.href){ location.href = tr.dataset.href; return; }   // 選手列：點整列直接跳個人頁
     var d = tr.nextElementSibling;
     if(d && d.classList.contains('detail')){ d.classList.toggle('hidden'); tr.classList.toggle('open'); }
   });
@@ -1186,5 +1189,7 @@
   }
 })();
 </script>
+<script>/* 測試站(test.*)：把賽事管理/登入連結指向測試後台 app-test */
+(function(){if(location.hostname.indexOf('test.')!==0)return;var b='https://app-test.beytop.net',ls=document.querySelectorAll('a[href^="https://app.beytop.net"]'),i;for(i=0;i<ls.length;i++){ls[i].href=ls[i].getAttribute('href').replace('https://app.beytop.net',b);}})();</script>
 </body>
 </html>

@@ -17,7 +17,7 @@ data/main.json
 .claude/
 *.env.local
 .env.local
-db備份/
+資料庫備份/
 
 # ===== 不上傳：系統雜檔 =====
 Thumbs.db
